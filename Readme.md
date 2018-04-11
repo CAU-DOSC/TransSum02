@@ -1,5 +1,5 @@
 
-오픈소스프로젝트
+오픈소스프로젝트(CathedralAndBazaarOrgByEsr.pdf 번역)
 =============
 
 팀원
