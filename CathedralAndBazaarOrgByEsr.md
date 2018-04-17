@@ -256,107 +256,34 @@ with a Unix box and a SLIP/PPP mail connection really needs.
 
 리눅스와 인출 메일의 역사가 우리로 하여금 집중하게 끔 하는 점은 사용자와 공동 개발자의 크고 활발한 커뮤니티의 존재 안에서의 소프트웨어의 발전이다.
 "객관화 프로그래밍(egoless programming)"에 대한 제롤드 웨인버그의 주장에 따르면, 그는, 개발자들이 그들의 코드에 대해 텃세를 부리지 않고, 다른 사람들로 하여금 그 안에 있는 버그와 가능성 있는 향상을 보도록 격려하는 직장에서 프로그램 향상이 다른 어떤 곳에서 보다 매우 빠르게 나타난다고 주장한다.
-That is, while coding
-remains an essentially solitary activity, the really great hacks come from harnessing the attention and
-brainpower of entire communities. The developer who uses only his or her own brain in a closed project is
-going to fall behind the developer who knows how to create an open, evolutionary context in which
-feedback exploring the design space, code contributions, bug-spotting, and other improvements come from
-from hundreds (perhaps thousands) of people.
+코딩은 본질적으로는 개인의 활동이지만 가장 중요한 핵심은 전체 커뮤니티의 지력과 주의와 관련된 것이다. 
 
-But the traditional Unix world was prevented from pushing this approach to the ultimate by several factors.
-One was the legal contraints of various licenses, trade secrets, and commercial interests. Another (in
-hindsight) was that the Internet wasn't yet good enough.
+혼자서만 개발하는 개발자는 수백명으로부터 여러 피드백을 얻는 개발자들에비해 뒤떨어지게 될것이다.
+하지만 과거의 유닉스 세계에서는 다양한 라이센스, 거래 비밀, 상업적 관심과 충분히 발전을 이루지 못한 인터넷에 의해 이러한 방식을 금지해왔엇다.
+저렴한 인터넷이 발전되기 전, 웨인버그의 "이글루" 프로그래밍이라는 문화를 장려하는 지리적으로 가까운 공동체들이 있었다.
+리눅스는 전 세계와 그 인재들을 사용한 성공적인 첫번째 프로젝트였다.
+리눅스의 발전이 World Wide Web, ISP의 발전들과 같은 기간에 일어난것은 결코 우연이아니다.
+이에 있어서 리눅스 토발즈는 인터넷 액세스가 퍼짐에 따라 만들어진 새로운 규칙에 따라 작업하는 방법을 배운 최초의 사용자였다.
+필자는 값싼 인터넷이 리눅스 모델의 발전에 필요조건이기는 하지만 충분조건은 아니라고 생각한다. 
+또 다른 중요한 요소는 개발자들이 공동개발에 이끌리고 매체들로부터 최대한의 수단을 이끌어 낼 수 있는 리더쉽과 협력적인 풍습이다.
+필자는 이 리더쉽이 권력 관계이 기초할 수 없고, 그러할 수 있을지라도 강압에 의한 리더쉽은 현재의 결과를 이끌어낼 수 없을것이라고 주장한다.
+웨인버그는 이 리더쉽에 대하여 한 러시아 인의 과거 기억을 인용하였다. 
+그 러시아 인은 자라온 환경 때문에 자신과 같은 모든 젊은이들이 강압적인 리더쉽이 필요하다는 생각을 갖고 있었다.
+하지만 기업을 경영하며 여러 사람들을 상대하며 작은 실수가 즉시 큰 결과를 가져올 수 있다는것을 보게되어 명령과 명령의 원칙에 따라 행동하는것 사이의 차이점을 인식하기 시작하였다.
+전자는 군대에서나 실용적이지만 현실 세계에서는 아무런 가치가 없었다. 또한 그 목적은 많은 단합된 의지의 가혹한 노력을 통해서만 달성될 수 있다.
+이 많은 단합된 의지의 가혹한 노력이 정확히 리눅스 프로젝트가 요구하는것이다. 또한 명령의 원리는 무정부주의자들의 낙원이라 불리는 인터넷상의 지원가들에게는 불가능하다.
+합동 프로젝트를 이끌고 싶은 해커들이 효과적으로 작업하기 위해서는 크로포트킨의 방식과 리눅스 토발즈의 법칙을 배워야 한다고 주장한다.
+앞서 필자가 리눅스 토발즈의 법칙에 대한 설명으로 델포이 효과를 언급하였지만 자유시장, 생태학이 리눅스 세계에 더 유사하다. 
+리눅스 토발즈는 대부분이 다른이들에 의해 개발되는 프로젝트들의 문지기로써 성공적으로 자리를 매김하였으며 프로젝트가 자생력을 지닐때 까지 프로젝트에 대한 관심을 키움으로써 크로포트 원리를 보였다.
+우리는 리눅스 토발즈의 방법이 개인 개발자들이 가능한한 끝까지 확고하게 연결할수 있는 효과적인 시장을 만드는것이라고 볼 수 있다.
+fetchmail 프로젝트에서 필자는 그의 방법이 좋은 결과를 이끌어 냈다는것을 증명해냈다. 
+많은 사람들이 자기 주도적인 이기주의자들이 하락하기를 바라지만 리눅스 documentation에 명백히 왜곡된다.
+fetchmail,리눅스 커널 프로젝트들은 많은 해커들의 노력에 적절히 보상함으로써 프로젝트의 붕괴없이 많은 개발자, 종합자들이 코드를 캡쳐하기위해 인터넷을 사용할 수 있다는것을 증명하였다. 
 
-Before cheap Internet, there were some geographically compact communities where the culture encouraged
-Weinberg's ''egoless'' programming, and a developer could easily attract a lot of skilled kibitzers and co-
-developers. Bell Labs, the MIT AI and LCS labs, UC Berkeley—these became the home of innovations that
-are legendary and still potent.
-
-Linux was the first project for which a conscious and successful effort to use the entire world as its talent
-pool was made. I don't think it's a coincidence that the gestation period of Linux coincided with the birth
-of the World Wide Web, and that Linux left its infancy during the same period in 1993–1994 that saw the
-takeoff of the ISP industry and the explosion of mainstream interest in the Internet. Linus was the first
-person who learned how to play by the new rules that pervasive Internet access made possible.
-
-While cheap Internet was a necessary condition for the Linux model to evolve, I think it was not by itself a
-sufficient condition. Another vital factor was the development of a leadership style and set of cooperative
-customs that could allow developers to attract co-developers and get maximum leverage out of the medium.
-
-But what is this leadership style and what are these customs? They cannot be based on power
-relationships—and even if they could be, leadership by coercion would not produce the results we see.
-Weinberg quotes the autobiography of the 19th-century Russian anarchist Pyotr Alexeyvich Kropotkin's
-Memoirs of a Revolutionist to good effect on this subject:
-
-Having been brought up in a serf -owner's family, I entered active life, like all young men of my time, with
-a great deal of confidence in the necessity of commanding, ordering, scolding, punishing and the like. But
-when, at an early stage, I had to manage serious enterprises and to deal with [free] men, and when each
-mistake would lead at once to heavy consequences, I began to appreciate the difference between acting
-on the principle of command and discipline and acting on the principle of common understanding. The
-former works admirably in a military parade, but it is worth nothing where real life is concerned, and the
-aim can be achieved only through the severe effort of many converging wills.
-
-The ''severe effort of many converging wills'' is precisely what a project like Linux requires—and the
-''principle of command'' is effectively impossible to apply among volunteers in the anarchist's paradise we
-
-
-call the Internet. To operate and compete effectively, hackers who want to lead collaborative projects have
-to learn how to recruit and energize effective communities of interest in the mode vaguely suggested by
-Kropotkin's ''principle of understanding''. They must learn to use Linus's Law.[SP]
-
-Earlier I referred to the ''Delphi effect'' as a possible explanation for Linus's Law. But more powerful analogies
-to adaptive systems in biology and economics also irresistably suggest themselves. The Linux world behaves
-in many respects like a free market or an ecology, a collection of selfish agents attempting to maximize
-utility which in the process produces a self-correcting spontaneous order more elaborate and efficient than
-any amount of central planning could have achieved. Here, then, is the place to seek the ''principle of
-understanding''.
-
-The ''utility function'' Linux hackers are maximizing is not classically economic, but is the intangible of their
-own ego satisfaction and reputation among other hackers. (One may call their motivation ''altruistic'', but
-this ignores the fact that altruism is itself a form of ego satisfaction for the altruist). Voluntary cultures that
-work this way are not actually uncommon; one other in which I have long participated is science fiction
-fandom, which unlike hackerdom has long explicitly recognized ''egoboo'' (ego-boosting, or the
-enhancement of one's reputation among other fans) as the basic drive behind volunteer activity.
-
-Linus, by successfully positioning himself as the gatekeeper of a project in which the development is mostly
-done by others, and nurturing interest in the project until it became self-sustaining, has shown an acute
-grasp of Kropotkin's ''principle of shared understanding''. This quasi-economic view of the Linux world
-enables us to see how that understanding is applied.
-
-We may view Linus's method as a way to create an efficient market in ''egoboo''—to connect the selfishness
-of individual hackers as firmly as possible to difficult ends that can only be achieved by sustained
-cooperation. With the fetchmail project I have shown (albeit on a smaller scale) that his methods can be
-duplicated with good results. Perhaps I have even done it a bit more consciously and systematically than
-he.
-
-Many people (especially those who politically distrust free markets) would expect a culture of self-directed
-egoists to be fragmented, territorial, wasteful, secretive, and hostile. But this expectation is clearly falsified
-by (to give just one example) the stunning variety, quality, and depth of Linux documentation. It is a hallowed
-given that programmers hate documenting; how is it, then, that Linux hackers generate so much
-documentation? Evidently Linux's free market in egoboo works better to produce virtuous, other-directed
-behavior than the massively-funded documentation shops of commercial software producers.
-
-Both the fetchmail and Linux kernel projects show that by properly rewarding the egos of many other
-hackers, a strong developer/coordinator can use the Internet to capture the benefits of having lots of co-
-developers without having a project collapse into a chaotic mess. So to Brooks's Law I counter-propose the
-following:
-
-
-19: Provided the development coordinator has a communications medium at least as good as the Internet,
-and knows how to lead without coercion, many heads are inevitably better than one.
-
-I think the future of open-source software will increasingly belong to people who know how to play Linus's
-game, people who leave behind the cathedral and embrace the bazaar. This is not to say that individual
-vision and brilliance will no longer matter; rather, I think that the cutting edge of open-source software will
-belong to people who start from individual vision and brilliance, then amplify it through the effective
-construction of voluntary communities of interest.
-
-Perhaps this is not only the future of open-source software. No closed-source developer can match the
-pool of talent the Linux community can bring to bear on a problem. Very few could afford even to hire the
-more than 200 (1999: 600, 2000: 800) people who have contributed to fetchmail!
-
-Perhaps in the end the open-source culture will triumph not because cooperation is morally right or software
-''hoarding'' is morally wrong (assuming you believe the latter, which neither Linus nor I do), but simply
-because the closed-source world cannot win an evolutionary arms race with open-source communities that
-can put orders of magnitude more skilled time into a problem.
-
+19: 개발 담당자가 최소한 인터넷에 버금가는 의사 소통 수단을 보유하고 있으며 강압없이 어떻게 이끌어가는지를 안다면 많은 사람들이 모일수록 한명보다는 나을것이다.
+오픈소스의 미래는 리눅스게임을 할줄 아는 사람들, cathedrl and embrace the bazzar와 연관된 사람들에 달려있다. 
+이는 개인의 비젼이 더 이상 중요하지 않다는것이 아니라 오픈 소스 소프트웨어가 개인으로부터 시작되어 이에 흥미를 지닌 여러 사람들들로 확장됨으로써 이루어진다는것이다.
+이는 오픈 소스 소프트웨어만의 문제가 아니다. 그 어떠한 폐쇄된 소스 개발자도 한 문제를 해결하기 위하여 리눅스 커뮤니티가 지닌 인재 풀을 따라잡을 수 없게될것이다.
+아마 결국에는 오픈소스 문화가 승리하게 될것이다. 협력이 도덕적으로 옳다는것이 아니라 간단히 폐쇄된 소스 세계는 어떤 문데에 대하여 더 많은 숙련된 시간을 투입할 수 있는 오픈 소스 
+공동체들과의 경쟁에 있어서 이길 수 없기 때문이다. 
 
