@@ -1,4 +1,4 @@
-# 성당과 시장
+﻿# 성당과 시장
 
 필자는 가장 중요한 소프트웨어 (운영체제나 Emacs 같이 대단히 커다란 커다란 도구들) 은 성당을 건축하듯이, 즉 몇 명의 도사 프로그래머나 작은 그룹의 뛰어난 프로그래머들에 의해 조심스럽게 만들어지고 베타버전도 필요없이 발표되어야 한다고 생각했던 것이다.
 
@@ -225,231 +225,38 @@ and a burgeoning beta list. It gradually dawned on me that I was no longer engag
 hack that might happen to be useful to few other people. I had my hands on a program that every hacker
 with a Unix box and a SLIP/PPP mail connection really needs.
 
+당신은 나중에 결과가 필연적이고, 자연스럽고, 오히려 미리 정해진 것처럼 보일만큼 강력한 설계 아이디어로 그것에 빠져들어야 한다. 이와 같은 아이디어를 위해 노력할 수 있는 방법은 오직 수많은 아이디어를 가지고 있거나, 다른 사람들의 좋은 아이디어들을 창작자가 가야한다고 생각하는 방향으로 이끌 만큼의 공학적 정의를 가지고 있는 것 밖에 없다.
+나는 칼 해리스와 해리 호크헤이서로부터 몇가지 아이디어를 얻었고 그것들을 열심히 발전시켰다. 우리 중 아무도 사람들이 천재적이라고 생각하는 낭만적인 방식으로 '독창적' 이지 못했다. 내가 이를 깨닫고 난 후에 쓰는 가장 첫번째이고 압도적으로 중요한 기능은 멀티드롭 서포트이다(multidrop support). 멀티드롭 서포트 기능을 추가하게 된 주된 이유는 이 기능이 나로 하여금 모든 경우에 대하여 주소 지정을 다루도록 하여, 싱글 드롭으로부터 버그를 해결할 수 있다고 생각하게 했기 때문이다.
+다음은 멀티드롭 주소지정이 아주 뛰어난 설계 방안임을 밝혀준다:
 
-With the SMTP forwarding feature, it pulled far enough in front of the competition to potentially become
-a ''category killer'', one of those classic programs that fills its niche so competently that the alternatives are
-not just discarded but almost forgotten.
+14. 어떠한 도구도 예측가능한 방식으로나 절대 예측할 수 없는 방식으로나, 모두 유용해야 한다.
 
-I think you can't really aim or plan for a result like this. You have to get pulled into it by design ideas so
-powerful that afterward the results just seem inevitable, natural, even foreordained. The only way to try for
-ideas like that is by having lots of ideas—or by having the engineering judgment to take other peoples'
-good ideas beyond where the originators thought they could go.
+나의 베타 테스터에 의해 요구된 또다른 중요한 변화는 8비트 짜리의 MIME 연산을 지원하는 것이었다. 이 기능을 개발한 이유는 다음 규칙에 따른 것이다:
 
-Andy Tanenbaum had the original idea to build a simple native Unix for IBM PCs, for use as a teaching tool
-(he called it Minix). Linus Torvalds pushed the Minix concept further than Andrew probably thought it could
-go—and it grew into something wonderful. In the same way (though on a smaller scale), I took some ideas
-by Carl Harris and Harry Hochheiser and pushed them hard. Neither of us was 'original' in the romantic
-way people think is genius. But then, most science and engineering and software development isn't done
-by original genius, hacker mythology to the contrary.
+15. 어떤 종류의 게이트웨이 기반 소프트웨어를 설계할 때는, 데이터 스트림을 최대한 방해하지 않도록 노력하는 것이다!
 
-The results were pretty heady stuff all the same—in fact, just the kind of success every hacker lives for! And
-they meant I would have to set my standards even higher. To make fetchmail as good as I now saw it could
-be, I'd have to write not just for my own needs, but also include and support features necessary to others
-but outside my orbit. And do that while keeping the program simple and robust.
+## 인출 메일(fetchmail)로부터 몇가지 배울 점들
 
-The first and overwhelmingly most important feature I wrote after realizing this was multidrop support—
-the ability to fetch mail from mailboxes that had accumulated all mail for a group of users, and then route
-each piece of mail to its individual recipients.
+인출 메일 제어 문법의 언어 영역은 매우 제한되어 있기 때문에, 영어의 매우 작은 일부와 실제 제어 언어 사이에 정신적으로 이동하는 것의 혼란은 매우 적은 가능성이 있다. 이러한 것에 배울 점이 있다;
 
-I decided to add the multidrop support partly because some users were clamoring for it, but mostly because
-I thought it would shake bugs out of the single-drop code by forcing me to deal with addressing in full
-generality. And so it proved. Getting RFC 822 address parsing right took me a remarkably long time, not
-because any individual piece of it is hard but because it involved a pile of interdependent and fussy details.
+16. 당신의 언어가 Turing-complete 가까이에 없다면, 문법적 설탕은 당신의 친구가 될 것이다.
+또다른 배울 점은 모호함에 의한 보안에 관한 것이다.
 
-But multidrop addressing turned out to be an excellent design decision as well. Here's how I knew:
+17. 보안 시스템은 자신의 비밀만큼이나 안전하다. 가짜 비밀을 조심하라.
 
-14. Any tool should be useful in the expected way, but a truly great tool lends itself to uses you never
-expected.
+## 시장(Bazaar) 스타일을 위한 필요한 전제조건
 
-The unexpected use for multidrop fetchmail is to run mailing lists with the list kept, and alias expansion
-done, on the client side of the Internet connection. This means someone running a personal machine
-through an ISP account can manage a mailing list without continuing access to the ISP's alias files.
+당신이 커뮤니티를 제작하기 시작했을 때, 당신이 제시할 수 있는 것은 '타당한 약속' 이다. 이는 (a) 프로그램이 잘은 아니더라도 돌아가는 것, 그리고 (b) 가능성이 있는 공동 개발자들에게 이것이 예측가능한 미래에 분명히 형태를 잘 갖춘 것으로 발전 할 수 있다고 설득하는 것이다.
+나는 조정자가 다른 사람으로부터 좋은 설계 아이디어를 인지할 줄 아는 능력은 매우 중요하다고 생각한다. 리눅스와 인출 메일 프로젝트 모두 이러한 증거를 보여주고 있다. 예를 들어, 나는 내가 명석해 지려는 나의 경향을 억제했기 때문에, 인출 메일이 부분적으로 성공했다고 믿는다.
+시장 프로젝트에 있어서 뛰어난 설계 능력만큼이나 중요한 기술이라고 생각되는 것은 시장 프로젝트의 조정자나 리더가 반드시 좋은 사람들과 의사소통 능력을 가지고 있어야 한다는 것이다.
 
-Another important change demanded by my beta-testers was support for 8-bit MIME (Multipurpose Internet
-Mail Extensions) operation. This was pretty easy to do, because I had been careful to keep the code 8-bit
-clean (that is, to not press the 8th bit, unused in the ASCII character set, into service to carry information
+## 오픈소스 소프트웨어에 대한 사회적 문맥
 
+18. 흥미로운 문제를 해결하기 위해서는, 당신이 흥미를 느끼는 문제부터 찾아보기 시작하라
 
-within the program). Not because I anticipated the demand for this feature, but rather in obedience to
-another rule:
-
-15. When writing gateway software of any kind, take pains to disturb the data stream as little as possible—
-and never throw away information unless the recipient forces you to!
-
-Had I not obeyed this rule, 8-bit MIME support would have been difficult and buggy. As it was, all I had to
-do is read the MIME standard (RFC 1652) and add a trivial bit of header-generation logic.
-
-Some European users bugged me into adding an option to limit the number of messages retrieved per
-session (so they can control costs from their expensive phone networks). I resisted this for a long time, and
-I'm still not entirely happy about it. But if you're writing for the world, you have to listen to your customers—
-this doesn't change just because they're not paying you in money.
-
-## A Few More Lessons from Fetchmail
-
-Before we go back to general software-engineering issues, there are a couple more specific lessons from
-the fetchmail experience to ponder. Nontechnical readers can safely skip this section.
-
-The rc (control) file syntax includes optional 'noise' keywords that are entirely ignored by the parser. The
-English-like syntax they allow is considerably more readable than the traditional terse keyword-value pairs
-you get when you strip them all out.
-
-These started out as a late-night experiment when I noticed how much the rc file declarations were
-beginning to resemble an imperative minilanguage. (This is also why I changed the original popclient
-''server'' keyword to ''poll'').
-
-It seemed to me that trying to make that imperative minilanguage more like English might make it easier
-to use. Now, although I'm a convinced partisan of the ''make it a language'' school of design as exemplified
-by Emacs and HTML and many database engines, I am not normally a big fan of ''English-like'' syntaxes.
-
-Traditionally programmers have tended to favor control syntaxes that are very precise and compact and
-have no redundancy at all. This is a cultural legacy from when computing resources were expensive, so
-parsing stages had to be as cheap and simple as possible. English, with about 50% redundancy, looked like
-a very inappropriate model then.
-
-This is not my reason for normally avoiding English-like syntaxes; I mention it here only to demolish it. With
-cheap cycles and core, terseness should not be an end in itself. Nowadays it's more important for a language
-to be convenient for humans than to be cheap for the computer.
-
-There remain, however, good reasons to be wary. One is the complexity cost of the parsing stage—you
-don't want to raise that to the point where it's a significant source of bugs and user confusion in itself.
-Another is that trying to make a language syntax English-like often demands that the ''English'' it speaks
-
-
-be bent seriously out of shape, so much so that the superficial resemblance to natural language is as
-confusing as a traditional syntax would have been. (You see this bad effect in a lot of so-called ''fourth
-generation'' and commercial database-query languages.)
-
-The fetchmail control syntax seems to avoid these problems because the language domain is extremely
-restricted. It's nowhere near a general-purpose language; the things it says simply are not very complicated,
-so there's little potential for confusion in moving mentally between a tiny subset of English and the actual
-control language. I think there may be a broader lesson here:
-
-16. When your language is nowhere near Turing-complete, syntactic sugar can be your friend.
-
-Another lesson is about security by obscurity. Some fetchmail users asked me to change the software to
-store passwords encrypted in the rc file, so snoopers wouldn't be able to casually see them.
-
-I didn't do it, because this doesn't actually add protection. Anyone who's acquired permissions to read your
-rc file will be able to run fetchmail as you anyway—and if it's your password they're after, they'd be able to
-rip the necessary decoder out of the fetchmail code itself to get it.
-
-All .fetchmailrc password encryption would have done is give a false sense of security to people who don't
-think very hard. The general rule here is:
-
-17. A security system is only as secure as its secret. Beware of pseudo-secrets.
-
-## Necessary Preconditions for the Bazaar Style
-
-Early reviewers and test audiences for this essay consistently raised questions about the preconditions for
-successful bazaar-style development, including both the qualifications of the project leader and the state of
-code at the time one goes public and starts to try to build a co-developer community.
-
-It's fairly clear that one cannot code from the ground up in bazaar style [IN]. One can test, debug and
-improve in bazaar style, but it would be very hard to originate a project in bazaar mode. Linus didn't try it.
-I didn't either. Your nascent developer community needs to have something runnable and testable to play
-with.
-
-When you start community-building, what you need to be able to present is a plausible promise. Yo ur
-program doesn't have to work particularly well. It can be crude, buggy, incomplete, and poorly documented.
-What it must not fail to do is (a) run, and (b) convince potential co-developers that it can be evolved into
-something really neat in the foreseeable future.
-
-Linux and fetchmail both went public with strong, attractive basic designs. Many people thinking about the
-bazaar model as I have presented it have correctly considered this critical, then jumped from that to the
-conclusion that a high degree of design intuition and cleverness in the project leader is indispensable.
-
-But Linus got his design from Unix. I got mine initially from the ancestral popclient (though it would later
-
-
-change a great deal, much more proportionately speaking than has Linux). So does the leader/coordinator
-for a bazaar-style effort really have to have exceptional design talent, or can he get by through leveraging
-the design talent of others?
-
-I think it is not critical that the coordinator be able to originate designs of exceptional brilliance, but it is
-absolutely critical that the coordinator be able to recognize good design ideas from others.
-
-Both the Linux and fetchmail projects show evidence of this. Linus, while not (as previously discussed) a
-spectacularly original designer, has displayed a powerful knack for recognizing good design and integrating
-it into the Linux kernel. And I have already described how the single most powerful design idea in fetchmail
-(SMTP forwarding) came from somebody else.
-
-Early audiences of this essay complimented me by suggesting that I am prone to undervalue design
-originality in bazaar projects because I have a lot of it myself, and therefore take it for granted. There may
-be some truth to this; design (as opposed to coding or debugging) is certainly my strongest skill.
-
-But the problem with being clever and original in software design is that it gets to be a habit—you start
-reflexively making things cute and complicated when you should be keeping them robust and simple. I
-have had projects crash on me because I made this mistake, but I managed to avoid this with fetchmail.
-
-So I believe the fetchmail project succeeded partly because I restrained my tendency to be clever; this
-argues (at least) against design originality being essential for successful bazaar projects. And consider Linux.
-Suppose Linus Torvalds had been trying to pull off fundamental innovations in operating system design
-during the development; does it seem at all likely that the resulting kernel would be as stable and successful
-as what we have?
-
-A certain base level of design and coding skill is required, of course, but I expect almost anybody seriously
-thinking of launching a bazaar effort will already be above that minimum. The open-source community's
-internal market in reputation exerts subtle pressure on people not to launch development efforts they're
-not competent to follow through on. So far this seems to have worked pretty well.
-
-There is another kind of skill not normally associated with software development which I think is as
-important as design cleverness to bazaar projects—and it may be more important. A bazaar project
-coordinator or leader must have good people and communications skills.
-
-This should be obvious. In order to build a development community, you need to attract people, interest
-them in what you're doing, and keep them happy about the amount of work they're doing. Technical sizzle
-will go a long way towards accomplishing this, but it's far from the whole story. The personality you project
-matters, too.
-
-It is not a coincidence that Linus is a nice guy who makes people like him and want to help him. It's not a
-coincidence that I'm an energetic extrovert who enjoys working a crowd and has some of the delivery and
-
-
-instincts of a stand-up comic. To make the bazaar model work, it helps enormously if you have at least a
-little skill at charming people.
-
-## The Social Context of Open-Source Software
-
-It is truly written: the best hacks start out as personal solutions to the author's everyday problems, and
-spread because the problem turns out to be typical for a large class of users. This takes us back to the
-matter of rule 1, restated in a perhaps more useful way:
-
-18. To solve an interesting problem, start by finding a problem that is interesting to you.
-
-So it was with Carl Harris and the ancestral popclient, and so with me and fetchmail. But this has been
-understood for a long time. The interesting point, the point that the histories of Linux and fetchmail seem
-to demand we focus on, is the next stage—the evolution of software in the presence of a large and active
-community of users and co-developers.
-
-In The Mythical Man-Month, Fred Brooks observed that programmer time is not fungible; adding developers
-to a late software project makes it later. As we've seen previously, he argued that the complexity and
-communication costs of a project rise with the square of the number of developers, while work done only
-rises linearly. Brooks's Law has been widely regarded as a truism. But we've examined in this essay an
-number of ways in which the process of open-source development falsifies the assumptionms behind it—
-and, empirically, if Brooks's Law were the whole picture Linux would be impossible.
-
-Gerald Weinberg's classic The Psychology of Computer Programming supplied what, in hindsight, we can
-see as a vital correction to Brooks. In his discussion of ''egoless programming'', Weinberg observed that in
-shops where developers are not territorial about their code, and encourage other people to look for bugs
-and potential improvements in it, improvement happens dramatically faster than elsewhere. (Recently, Kent
-Beck's 'extreme programming' technique of deploying coders in pairs looking over one anothers' shoulders
-might be seen as an attempt to force this effect.)
-
-Weinberg's choice of terminology has perhaps prevented his analysis from gaining the acceptance it
-deserved—one has to smile at the thought of describing Internet hackers as ''egoless''. But I think his
-argument looks more compelling today than ever.
-
-The bazaar method, by harnessing the full power of the ''egoless programming'' effect, strongly mitigates
-the effect of Brooks's Law. The principle behind Brooks's Law is not repealed, but given a large developer
-population and cheap communications its effects can be swamped by competing nonlinearities that are not
-otherwise visible. This resembles the relationship between Newtonian and Einsteinian physics—the older
-system is still valid at low energies, but if you push mass and velocity high enough you get surprises like
-nuclear explosions or Linux.
-
-The history of Unix should have prepared us for what we're learning from Linux (and what I've verified
-
-
-experimentally on a smaller scale by deliberately copying Linus's methods [EGCS]). That is, while coding
+리눅스와 인출 메일의 역사가 우리로 하여금 집중하게 끔 하는 점은 사용자와 공동 개발자의 크고 활발한 커뮤니티의 존재 안에서의 소프트웨어의 발전이다.
+"객관화 프로그래밍(egoless programming)"에 대한 제롤드 웨인버그의 주장에 따르면, 그는, 개발자들이 그들의 코드에 대해 텃세를 부리지 않고, 다른 사람들로 하여금 그 안에 있는 버그와 가능성 있는 향상을 보도록 격려하는 직장에서 프로그램 향상이 다른 어떤 곳에서 보다 매우 빠르게 나타난다고 주장한다.
+That is, while coding
 remains an essentially solitary activity, the really great hacks come from harnessing the attention and
 brainpower of entire communities. The developer who uses only his or her own brain in a closed project is
 going to fall behind the developer who knows how to create an open, evolutionary context in which
