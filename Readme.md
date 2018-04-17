@@ -2,6 +2,10 @@
 오픈소스프로젝트(CathedralAndBazaarOrgByEsr.pdf 번역)
 =============
 
+CathedralAndBazaarOrgByEsr.md에 요약했습니다.
+-------------
+
+
 팀원
 -------------
 
