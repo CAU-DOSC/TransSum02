@@ -656,230 +656,113 @@ hack that might happen to be useful to few other people. I had my hands on a pro
 with a Unix box and a SLIP/PPP mail connection really needs.
 
 
-With the SMTP forwarding feature, it pulled far enough in front of the competition to potentially become
-a ''category killer'', one of those classic programs that fills its niche so competently that the alternatives are
-not just discarded but almost forgotten.
+SMTP Æ÷¿öµù Æ¯Â¡°ú ¾î¿ï·¯, ÀÌ°ÍÀº ÀáÀçÀûÀ¸·Î "Ä«Å×°í¸® Å³·¯"°¡ µÉ ¸¸Å­ °æÀï ¾ÕÀ¸·Î ²ø·Á ³ª¿Ô´Ù, "Ä«Å×°í¸® Å³·¯"¶õ ´Ù¸¥ °ÍµéÀÌ ¹«½Ã´çÇÏ´Â °ÍÀÌ ¾Æ´Ï¶ó °ÅÀÇ ÀØÇôÁú Á¤µµ·Î ÀûÇÕÇÑ Àå¼Ò¿¡ ÀûÀıÇÏ°Ô Ã¤¿î ÀüÇüÀûÀÎ ÇÁ·Î±×·¥ Áß ÇÏ³ªÀÌ´Ù.
 
-I think you can't really aim or plan for a result like this. You have to get pulled into it by design ideas so
-powerful that afterward the results just seem inevitable, natural, even foreordained. The only way to try for
-ideas like that is by having lots of ideasâ€”or by having the engineering judgment to take other peoples'
-good ideas beyond where the originators thought they could go.
+³ª´Â ´ç½ÅÀÌ ÀÌ°Í°ú °°Àº °á°ú¸¦ À§ÇØ ¿­¸ÁÇÏ°Å³ª °èÈ¹ÇÒ ¼ö ÀÖ´Ù°í »ı°¢ÇÏÁö´Â ¾Ê´Â´Ù. ´ç½ÅÀº ³ªÁß¿¡ °á°ú°¡ ÇÊ¿¬ÀûÀÌ°í, ÀÚ¿¬½º·´°í, ¿ÀÈ÷·Á ¹Ì¸® Á¤ÇØÁø °ÍÃ³·³ º¸ÀÏ¸¸Å­ °­·ÂÇÑ ¼³°è ¾ÆÀÌµğ¾î·Î ±×°Í¿¡ ºüÁ®µé¾î¾ß ÇÑ´Ù. ÀÌ¿Í °°Àº ¾ÆÀÌµğ¾î¸¦ À§ÇØ ³ë·ÂÇÒ ¼ö ÀÖ´Â ¹æ¹ıÀº ¿ÀÁ÷ ¼ö¸¹Àº ¾ÆÀÌµğ¾î¸¦ °¡Áö°í ÀÖ°Å³ª, ´Ù¸¥ »ç¶÷µéÀÇ ÁÁÀº ¾ÆÀÌµğ¾îµéÀ» Ã¢ÀÛÀÚ°¡ °¡¾ßÇÑ´Ù°í »ı°¢ÇÏ´Â ¹æÇâÀ¸·Î ÀÌ²ø ¸¸Å­ÀÇ °øÇĞÀû Á¤ÀÇ¸¦ °¡Áö°í ÀÖ´Â °Í ¹Û¿¡ ¾ø´Ù.
 
-Andy Tanenbaum had the original idea to build a simple native Unix for IBM PCs, for use as a teaching tool
-(he called it Minix). Linus Torvalds pushed the Minix concept further than Andrew probably thought it could
-goâ€”and it grew into something wonderful. In the same way (though on a smaller scale), I took some ideas
-by Carl Harris and Harry Hochheiser and pushed them hard. Neither of us was 'original' in the romantic
-way people think is genius. But then, most science and engineering and software development isn't done
-by original genius, hacker mythology to the contrary.
+¾Øµğ Å¸³Ù¹Ù¿òÀº °¡¸£Ä¡´Â ¿ëµµ(±×´Â ÀÌ°ÍÀ» ¹Ì´Ğ½ºMinix·Î ºÒ·¶´Ù)·Î ¾²±âÀ§ÇØ, IBM PC Àü¿ë °£´ÜÇÑ À¯´Ğ½º(Unix)¸¦ ¼³°èÇÒ ¿ø·¡ÀÇ »ı°¢À» °¡Áö°í ÀÖ¾ú´Ù. ¸®´ª½º Åä¹ßÁî´Â ±× ¹Ì´Ğ½º °³³äÀ» ¾Øµå·ù°¡ ¾Æ¸¶µµ ±×°ÍÀÌ °¡¾ßÇÏ´Â ¹æÇâÀÌ¶ó°í »ı°¢ÇÑ °Íº¸´Ù ÈÎ¾À ´õ ¹ßÀü½ÃÄ×´Ù, ±×¸®°í ±×°ÍÀº ¾ÆÁÖ ¸ÚÁø °ÍÀ¸·Î ¼ºÀåÇß´Ù. °°Àº ¹æ½ÄÀ¸·Î (´õ ÀÛÀº ±Ô¸ğ·Î), ³ª´Â Ä® ÇØ¸®½º¿Í ÇØ¸® È£Å©ÇìÀÌ¼­·ÎºÎÅÍ ¸î°¡Áö ¾ÆÀÌµğ¾î¸¦ ¾ò¾ú°í ±×µéÀ» ¿­½ÉÈ÷ ¹ßÀü½ÃÄ×´Ù. ¿ì¸® Áß ¾Æ¹«µµ »ç¶÷µéÀÌ ÃµÀçÀûÀÌ¶ó°í »ı°¢ÇÏ´Â ³¶¸¸ÀûÀÎ ¹æ½ÄÀ¸·Î 'µ¶Ã¢Àû'ÀÌÁö ¸øÇß´Ù. ±×¶õ, ´ëºÎºĞÀÇ °úÇĞ°ú °øÇĞ, ±×¸®°í ¼ÒÇÁÆ®¿ş¾î »ê¾÷Àº ¿ø·¡ ÃµÀçÀÎ ÇØÄ¿ÀÇ ½ÅÈ­¿¡ ÀÇÇØ ¹İ´ë·Î ÀÌ·ç¾îÁöÁö ¾Ê´Â´Ù.
 
-The results were pretty heady stuff all the sameâ€”in fact, just the kind of success every hacker lives for! And
-they meant I would have to set my standards even higher. To make fetchmail as good as I now saw it could
-be, I'd have to write not just for my own needs, but also include and support features necessary to others
-but outside my orbit. And do that while keeping the program simple and robust.
+±× °á°ú´Â ±×·³¿¡µµ ºÒ±¸ÇÏ°í ²Ï µé¶ß°Ô ÇÑ´Ù-»ç½Ç, ±×·¯ÇÑ ¼º°øÀº ¸ğµç ÇìÄ¿µéÀÌ °¥¸ÁÇÏ´Â °ÍÀÌ´Ù! ±×¸®°í ±×µéÀº ³»°¡ ³» ±âÁØÀ» Á» ´õ ³ô°Ô Àâ¾Æ¾ß ÇÏ´Â °ÍÀ» ÀÇ¹ÌÇÑ´Ù. ÇöÀç °¡´ÉÇÒ ¸¸Å­ ÀÎÃâ ¸ŞÀÏÀ» ÁÁ°Ô ¸¸µé±â À§ÇØ¼­´Â, ³ª´Â ³» ÇÊ¿ä¸¸À» À§ÇØ ¾µ »Ó¸¸ ¾Æ´Ï¶ó, ³» ¿µ¿ªÀº ¾Æ´ÏÁö¸¸ ´Ù¸¥ »ç¶÷µé¿¡°Ô ÇÊ¿äÇÑ ±â´ÉµéÀ» Áö¿øÇÏ°í Æ÷ÇÔ½ÃÄÑ¾ß ÇÑ´Ù. ±×¸®°í ÇÁ·Î±×·¥À» °£´ÜÇÏ°í °ß°íÇÏ°Ô²û ÇÏ´Â ¿ÍÁß¿¡ ±× ÀÛ¾÷À» ÇÏ´Â °ÍÀÌ´Ù.
 
-The first and overwhelmingly most important feature I wrote after realizing this was multidrop supportâ€”
-the ability to fetch mail from mailboxes that had accumulated all mail for a group of users, and then route
-each piece of mail to its individual recipients.
+³»°¡ ÀÌ¸¦ ±ú´İ°í ³­ ÈÄ¿¡ ¾²´Â °¡Àå Ã¹¹øÂ°ÀÌ°í ¾ĞµµÀûÀ¸·Î Áß¿äÇÑ ±â´ÉÀº ¸ÖÆ¼µå·Ó ¼­Æ÷Æ®ÀÌ´Ù(multidrop support)-ÀÌ°ÍÀº »ç¿ëÀÚ ±×·ìÀÇ ¸ğµç ¸ŞÀÏÀ» ÃàÃ´ÇÏ°í ÀÖ´Â ¸ŞÀÏ¹Ú½º·ÎºÎÅÍ ¸ŞÀÏÀ» Àâ¾Æ¿À°í, °¢°¢ÀÇ ¸ŞÀÏÀ» ÇØ´çÇÏ´Â ¼ö½ÅÀÚ¿¡°Ô Àü¼ÛÇÏ´Â ´É·ÂÀ» ÀÇ¹ÌÇÑ´Ù.
 
-I decided to add the multidrop support partly because some users were clamoring for it, but mostly because
-I thought it would shake bugs out of the single-drop code by forcing me to deal with addressing in full
-generality. And so it proved. Getting RFC 822 address parsing right took me a remarkably long time, not
-because any individual piece of it is hard but because it involved a pile of interdependent and fussy details.
+³ª´Â ¸ÖÆ¼µå·Ó ¼­Æ÷Æ® ±â´ÉÀ» Ãß°¡ÇÏ±â·Î ´ÙÁüÇß´Ù, ¿Ö³ÄÇÏ¸é ¸î¸î »ç¿ëÀÚµéÀº ÀÌ ±â´ÉÀ» ¿ä±¸ÇÏ±â ¶§¹®ÀÌ´Ù, ±×·¯³ª ÁÖµÈ ÀÌÀ¯´Â ÀÌ ±â´ÉÀÌ ³ª·Î ÇÏ¿©±İ ¸ğµç °æ¿ì¿¡ ´ëÇÏ¿© ÁÖ¼Ò ÁöÁ¤À» ´Ù·çµµ·Ï ÇÏ¿©, ½Ì±Û µå·ÓÀ¸·ÎºÎÅÍ ¹ö±×¸¦ ÇØ°áÇÒ ¼ö ÀÖ´Ù°í »ı°¢ÇÏ±â ¶§¹®ÀÌ´Ù. ±×¸®°í ÀÌ´Â Áõ¸íÀÌ µÇ¾ú´Ù. RFC 822ÀÇ ÁÖ¼Ò ÆÄ½ÌÀ» ¾Ë¸Â°Ô ÇÏ´Â °ÍÀº ¾Æ¹« ¾öÃ»³­ ½Ã°£ÀÌ °É·È´Ù, ±×°ÍÀÇ °¢ ºÎºĞÀÌ ¾î·Á¿î °ÍÀÌ ¾Æ´Ï¶ó, »ê´õ¹ÌÀÇ »óÈ£ µ¶¸³ÀûÀÌ°í ±î´Ù·Î¿î ¼¼ºÎ»çÇ×µéÀ» Æ÷ÇÔÇÏ°í ÀÖ±â ¶§¹®ÀÌ´Ù.
 
-But multidrop addressing turned out to be an excellent design decision as well. Here's how I knew:
-
-14. Any tool should be useful in the expected way, but a truly great tool lends itself to uses you never
-expected.
-
-The unexpected use for multidrop fetchmail is to run mailing lists with the list kept, and alias expansion
-done, on the client side of the Internet connection. This means someone running a personal machine
-through an ISP account can manage a mailing list without continuing access to the ISP's alias files.
-
-Another important change demanded by my beta-testers was support for 8-bit MIME (Multipurpose Internet
-Mail Extensions) operation. This was pretty easy to do, because I had been careful to keep the code 8-bit
-clean (that is, to not press the 8th bit, unused in the ASCII character set, into service to carry information
+±×·¯³ª ¸ÖÆ¼µå·Ó ÁÖ¼ÒÁöÁ¤Àº ¾ÆÁÖ ¶Ù¾î³­ ¼³°è ¹æ¾ÈÀ¸·Î ¹àÇôÁ³´Ù. ÀÌ´Â ³»°¡ ¾î¶»°Ô ¾Ë¾Ò´ÂÁö¿¡ ´ëÇÑ ³»¿ëÀÌ´Ù:
 
 
-within the program). Not because I anticipated the demand for this feature, but rather in obedience to
-another rule:
+14. ¾î¶°ÇÑ µµ±¸µµ ¿¹Ãø°¡´ÉÇÑ ¹æ½ÄÀ¸·Î À¯¿ëÇØ¾ß ÇÑ´Ù, ±×·¯³ª ½ÇÁ¦ ÈÇ¸¢ÇÑ µµ±¸´Â ´ç½ÅÀÌ Àı´ë·Î ¿¹Ãø ÇÒ ¼ö ¾ø´Â ¹æ½ÄÀ¸·Î »ç¿ëÇÏ°Ô²û ½º½º·Î¸¦ Á¦°øÇÑ´Ù.
 
-15. When writing gateway software of any kind, take pains to disturb the data stream as little as possibleâ€”
-and never throw away information unless the recipient forces you to!
+¸ÖÆ¼µå·Ó ÀÎÃâ¸ŞÀÏÀÇ ¿¹ÃøºÒ°¡ÇÑ ¹æ½ÄÀº ¿ìÆí¹° ¼ö½ÅÀÚ ¸í´ÜÀ» º¸È£ÇÑÃ¤·Î ½ÇÇà½ÃÅ°°í ÀÎÅÍ³İ ¿¬°á»ó¿¡¼­ Å¬¶óÀÌ¾ğÆ®(client) Ãø¿¡¼­ °¡¸í È®ÀåÀ» ¸¶Ä¡´Â °ÍÀÌ´Ù. ÀÌ´Â ´©±º°¡°¡ ISP °èÁÂ¸¦ ÅëÇØ °³ÀÎÀûÀÎ ±â°è¸¦ ½ÇÇà½ÃÅ³ ¼ö ÀÖÀ¸¸ç ISPÀÇ °¡¸í ÆÄÀÏ¿¡ ´ëÇÑ Áö¼ÓÀûÀÎ Á¢±Ù ¾øÀÌµµ ¼ö½ÅÀÚ ¸í´ÜÀ» °ü¸®ÇÒ ¼ö ÀÖÀ½À» ÀÇ¹ÌÇÑ´Ù.
 
-Had I not obeyed this rule, 8-bit MIME support would have been difficult and buggy. As it was, all I had to
-do is read the MIME standard (RFC 1652) and add a trivial bit of header-generation logic.
-
-Some European users bugged me into adding an option to limit the number of messages retrieved per
-session (so they can control costs from their expensive phone networks). I resisted this for a long time, and
-I'm still not entirely happy about it. But if you're writing for the world, you have to listen to your customersâ€”
-this doesn't change just because they're not paying you in money.
-
-## A Few More Lessons from Fetchmail
-
-Before we go back to general software-engineering issues, there are a couple more specific lessons from
-the fetchmail experience to ponder. Nontechnical readers can safely skip this section.
-
-The rc (control) file syntax includes optional 'noise' keywords that are entirely ignored by the parser. The
-English-like syntax they allow is considerably more readable than the traditional terse keyword-value pairs
-you get when you strip them all out.
-
-These started out as a late-night experiment when I noticed how much the rc file declarations were
-beginning to resemble an imperative minilanguage. (This is also why I changed the original popclient
-''server'' keyword to ''poll'').
-
-It seemed to me that trying to make that imperative minilanguage more like English might make it easier
-to use. Now, although I'm a convinced partisan of the ''make it a language'' school of design as exemplified
-by Emacs and HTML and many database engines, I am not normally a big fan of ''English-like'' syntaxes.
-
-Traditionally programmers have tended to favor control syntaxes that are very precise and compact and
-have no redundancy at all. This is a cultural legacy from when computing resources were expensive, so
-parsing stages had to be as cheap and simple as possible. English, with about 50% redundancy, looked like
-a very inappropriate model then.
-
-This is not my reason for normally avoiding English-like syntaxes; I mention it here only to demolish it. With
-cheap cycles and core, terseness should not be an end in itself. Nowadays it's more important for a language
-to be convenient for humans than to be cheap for the computer.
-
-There remain, however, good reasons to be wary. One is the complexity cost of the parsing stageâ€”you
-don't want to raise that to the point where it's a significant source of bugs and user confusion in itself.
-Another is that trying to make a language syntax English-like often demands that the ''English'' it speaks
+³ªÀÇ º£Å¸ Å×½ºÅÍ¿¡ ÀÇÇØ ¿ä±¸µÈ ¶Ç´Ù¸¥ Áß¿äÇÑ º¯È­´Â 8ºñÆ® Â¥¸®ÀÇ MIME ¿¬»êÀ» Áö¿øÇÏ´Â °ÍÀÌ¾ú´Ù. ÀÌ´Â ²Ï ½ÇÇàÇÏ±â ½¬¿ü´Âµ¥, ¿Ö³ÄÇÏ¸é ³ª´Â ÇØ´ç ÄÚµå°¡ 8ºñÆ® ±ú²ıÇÏµµ·Ï ÇØ¿Ô±â ¶§¹®ÀÌ´Ù.(Áï, 8ºñÆ®¸¦ ¾ĞÃàÇÏ´Â °ÍÀÌ ¾Æ´Ï¶ó, ¾Æ½ºÅ° ¹®ÀÚ ÁıÇÕ¿¡¼­ »ç¿ëÇÏÁö ¾Ê´Â ºÎºĞÀ» ÇÁ·Î±×·¥ ³»¿¡¼­ Á¤º¸¸¦ °¡Á®¿À±â À§ÇØ ¼­ºñ½º ¾ÈÀ¸·Î ³Ö´Â °ÍÀÌ´Ù) ³»°¡ ÀÌ ±â´É¿¡ ´ëÇÑ ¿ä±¸¸¦ ¿¹ÃøÇß±â ¶§¹®ÀÌ ¾Æ´Ï¶ó, ¶Ç´Ù¸¥ ±ÔÄ¢¿¡ µû¸¥ °ÍÀÌ´Ù:
 
 
-be bent seriously out of shape, so much so that the superficial resemblance to natural language is as
-confusing as a traditional syntax would have been. (You see this bad effect in a lot of so-called ''fourth
-generation'' and commercial database-query languages.)
+15. ¾î¶² Á¾·ùÀÇ °ÔÀÌÆ®¿şÀÌ ±â¹İ ¼ÒÇÁÆ®¿ş¾î¸¦ ¼³°èÇÒ ¶§´Â, µ¥ÀÌÅÍ ½ºÆ®¸²À» ÃÖ´ëÇÑ ¹æÇØÇÏÁö ¾Êµµ·Ï ³ë·ÂÇÏ´Â °ÍÀÌ´Ù-±×¸®°í °í°´ÀÌ ´ç½ÅÀ¸·Î ÇÏ¿©±İ °­Á¦ÇÏÁö ¾Ê´Â´Ù¸é Á¤º¸¸¦ Àı´ë ¹ö¸®Áö ¸»¾Æ¶ó!
 
-The fetchmail control syntax seems to avoid these problems because the language domain is extremely
-restricted. It's nowhere near a general-purpose language; the things it says simply are not very complicated,
-so there's little potential for confusion in moving mentally between a tiny subset of English and the actual
-control language. I think there may be a broader lesson here:
+¸¸¾à ³»°¡ ÀÌ ±ÔÄ¢À» µû¸£Áö ¾Ê¾Ò´Ù¸é, 8ºñÆ® Â¥¸®ÀÇ MIME Áö¿øÀº ¾î·Æ°Å³ª ¹ö±×°¡ ¸¹ÀÌ ³µÀ» ¼öµµ ÀÖ´Ù. »ç½ÇÀº ±×·¸Áö ¾Ê¾ÒÀ¸¹Ç·Î, ³»°¡ ÇØ¾ß Çß´ø °ÍÀº ¿ÀÁ÷ MIME Ç¥ÁØ(RFC 1625)À» ÀĞ°í Çì´õ-»ı¼º ·ÎÁ÷¿¡ ÀÛÀº ºñÆ®¸¦ Ãß°¡ÇÏ´Â °Í »ÓÀÌ¾ú´Ù.
 
-16. When your language is nowhere near Turing-complete, syntactic sugar can be your friend.
-
-Another lesson is about security by obscurity. Some fetchmail users asked me to change the software to
-store passwords encrypted in the rc file, so snoopers wouldn't be able to casually see them.
-
-I didn't do it, because this doesn't actually add protection. Anyone who's acquired permissions to read your
-rc file will be able to run fetchmail as you anywayâ€”and if it's your password they're after, they'd be able to
-rip the necessary decoder out of the fetchmail code itself to get it.
-
-All .fetchmailrc password encryption would have done is give a false sense of security to people who don't
-think very hard. The general rule here is:
-
-17. A security system is only as secure as its secret. Beware of pseudo-secrets.
-
-## Necessary Preconditions for the Bazaar Style
-
-Early reviewers and test audiences for this essay consistently raised questions about the preconditions for
-successful bazaar-style development, including both the qualifications of the project leader and the state of
-code at the time one goes public and starts to try to build a co-developer community.
-
-It's fairly clear that one cannot code from the ground up in bazaar style [IN]. One can test, debug and
-improve in bazaar style, but it would be very hard to originate a project in bazaar mode. Linus didn't try it.
-I didn't either. Your nascent developer community needs to have something runnable and testable to play
-with.
-
-When you start community-building, what you need to be able to present is a plausible promise. Yo ur
-program doesn't have to work particularly well. It can be crude, buggy, incomplete, and poorly documented.
-What it must not fail to do is (a) run, and (b) convince potential co-developers that it can be evolved into
-something really neat in the foreseeable future.
-
-Linux and fetchmail both went public with strong, attractive basic designs. Many people thinking about the
-bazaar model as I have presented it have correctly considered this critical, then jumped from that to the
-conclusion that a high degree of design intuition and cleverness in the project leader is indispensable.
-
-But Linus got his design from Unix. I got mine initially from the ancestral popclient (though it would later
+¸î¸î À¯·´ ÀÌ¿ëÀÚµéÀº (±×µéÀÌ ±×µéÀÇ ºñ½Ñ ÇÚµåÆù ³×Æ®¿öÅ©·Î ÀÎÇÑ ºñ¿ëÀ» Á¶ÀıÇÏ±â À§ÇØ) ¼¼¼Ç¸¶´Ù È¸¼öÇÏ´Â ¸Ş¼¼ÁöÀÇ °³¼ö¸¦ Á¦ÇÑÇÏ´Â ¿É¼ÇÀ» Ãß°¡ÇÏ¶ó°í ³ª¸¦ ±«·ÓÈù´Ù. ³ª´Â ÀÌ¸¦ ¿À·§µ¿¾È ÀúÇ×ÇØ¿Ô°í, ±×¸®°í ³ª´Â ¾ÆÁ÷ ÀÌºÎºĞ¿¡ ´ëÇØ ¿ÏÀüÈ÷ ±âºĞ ÁÁÁö ¾Ê´Ù. ±×·¯³ª ¸¸¾à ´ç½ÅÀÌ ¼¼°è¸¦ À§ÇØ ½áÁØ´Ù¸é, ´ç½ÅÀº ´ç½ÅÀÇ °í°´µéÀÇ ¸»À» µé¾î¾ß ÇÒ °ÍÀÌ´Ù-ÀÌ´Â ±×µéÀÌ ´ÜÁö ´ç½Å¿¡°Ô µ·À» ÁöºÒÇÑ´Ù°í ÇØ¼­ ¹Ù²îÁö ¾Ê´Â´Ù.
 
 
-change a great deal, much more proportionately speaking than has Linux). So does the leader/coordinator
-for a bazaar-style effort really have to have exceptional design talent, or can he get by through leveraging
-the design talent of others?
+## ÀÎÃâ ¸ŞÀÏ(fetchmail)·ÎºÎÅÍ ¸î°¡Áö ¹è¿ï Á¡µé
 
-I think it is not critical that the coordinator be able to originate designs of exceptional brilliance, but it is
-absolutely critical that the coordinator be able to recognize good design ideas from others.
+¼ÒÇÁÆ®¿ş¾î ¿£Áö´Ï¾î¿¡ °ü·ÃµÈ ¸î°¡Áö Áß¿ä»çÇ×µé·Î °¡±âÀü¿¡, ¼÷°íÇÒ ¸¸ÇÑ ÀÎÃâ °æÇèÀ¸·Î ºÎÅÍÀÇ Æ¯Á¤ ¹è¿ï Á¡µéÀÌ ´õ ÀÖ´Ù. ºñÀü¹®ÀûÀÎ µ¶ÀÚµéÀº ÀÌ ºÎºĞÀ» »ı·«ÇØµµ ÁÁ´Ù.
 
-Both the Linux and fetchmail projects show evidence of this. Linus, while not (as previously discussed) a
-spectacularly original designer, has displayed a powerful knack for recognizing good design and integrating
-it into the Linux kernel. And I have already described how the single most powerful design idea in fetchmail
-(SMTP forwarding) came from somebody else.
+rc (ÄÁÆ®·Ñ) ÆÄÀÏ ¹®¹ıÀº ÆÄ¼­¿¡ ÀÇÇØ¼­ ¿ÏÀüÈ÷ ¹«½ÃµÇ´Â ¼±ÅÃÀûÀÎ 'ÀâÀ½' Å°¿öµå¸¦ Æ÷ÇÔÇÏ°í ÀÖ´Ù. ±×µéÀÌ ÁØ¼öÇÏ´Â ¿µ¾î¿Í ºñ½ÁÇÏ°Ô »ı±ä ¹®¹ıÀº ´ç½ÅÀÌ ¿ÏÀüÈ÷ ±×°ÍµéÀ» Á¦°ÅÇßÀ» ¶§ °®´Â ÀüÅëÀûÀÎ °£´ÜÇÑ Å°¿öµå-°ª Â¦º¸´Ù´Â ÈÎ¾À °¡µ¶¼ºÀÌ ÀÖ´Ù.
 
-Early audiences of this essay complimented me by suggesting that I am prone to undervalue design
-originality in bazaar projects because I have a lot of it myself, and therefore take it for granted. There may
-be some truth to this; design (as opposed to coding or debugging) is certainly my strongest skill.
+ÀÌ·± °ÍµéÀº ³»°¡ ¾ó¸¶³ª rc ÆÄÀÏ ¼±¾ğµéÀÌ ±ä¿äÇÑ ¼Ò¾ğ¾î(minilanguage)¸¦ ´à¾Æ °¡±â ½ÃÀÛÇÏ´ÂÁö¸¦ ±ú´Ş¾ÒÀ» ¶§ÀÇ Áö³­ ¹ã °æÇèÀ¸·Î ºÎÅÍ ½ÃÀÛÇÑ´Ù. (ÀÌ°ÍÀº ¶ÇÇÑ ³»°¡ ¿ø·¡ ÆËÅ¬¶óÀÌ¾ğÆ®(popclient) "server" Å°¿öµå¸¦ "poll"·Î ¹Ù²Û ÀÌÀ¯ÀÌ±âµµ ÇÏ´Ù)
 
-But the problem with being clever and original in software design is that it gets to be a habitâ€”you start
-reflexively making things cute and complicated when you should be keeping them robust and simple. I
-have had projects crash on me because I made this mistake, but I managed to avoid this with fetchmail.
+±×·¯ÇÑ ±ä¿äÇÑ ¼Ò¾ğ¾î¸¦ ¿µ¾îÃ³·³ ¸¸µå´Â °ÍÀº ³ª¿¡°Ô ¼Ò¾ğ¾î¸¦ ´õ ½±°Ô ¾²°Ô ÇØÁÖ´Â °ÍÃ³·³ º¸¿´´Ù. ÇöÀç, ³»°¡ Emacs³ª HTML ±×¸®°í ¸¹Àº µ¥ÀÌÅÍº£ÀÌ½º ¿£Áøµé¿¡ ÀÇÇØ ÀüÇüÀûÀÎ ¿¹°¡ µÇ°í ÀÖ´Â ¼³°èÀÇ "¾ğ¾î·Î ¸¸µé±â" ÆÄÀÇ ¿­·ÄÇÑ ÁöÁöÀÚÀÓ¿¡µµ ºÒ±¸ÇÏ°í, ³ª´Â "¿µ¾î¿Í ºñ½ÁÇÑ" ¹®¹ıÀÇ Å« ÁöÁöÀÚ´Â ¾Æ´Ï´Ù.
 
-So I believe the fetchmail project succeeded partly because I restrained my tendency to be clever; this
-argues (at least) against design originality being essential for successful bazaar projects. And consider Linux.
-Suppose Linus Torvalds had been trying to pull off fundamental innovations in operating system design
-during the development; does it seem at all likely that the resulting kernel would be as stable and successful
-as what we have?
+ÀüÅëÀûÀ¸·Î ÇÁ·Î±×·¡¸ÓµéÀº ¸Å¿ì Á¤È®ÇÏ°í ²Ä²ÄÇÏ°í, ±×¸®°í ºÒÇÊ¿äÇÑ Áßº¹ÀÌ ¾ø´Â Á¦¾î ¹®¹ıµéÀ» ¼±È£ÇÏ´Â °æÇâÀÌ ÀÖ´Ù. ÀÌ´Â ÄÄÇ»ÅÍ ÀÚ¿øµéÀÌ ¸Å¿ì ºñ½Õ±â¶§¹®¿¡ ³ª¿À´Â ¹®È­ÀûÀÎ À¯»êÀÌ¸ç, µû¶ó¼­ ´Ü°è¸¦ ÆÄ½ÌÇÏ´Â °ÍÀº °¡´ÉÇÑÇÑ ¸Å¿ì Àú·ÅÇÏ°í °£´ÜÇØ¾ß ÇÑ´Ù. 50%ÀÇ ºÒÇÊ¿äÇÑ Áßº¹À» °¡Áö°í ÀÖ´Â ¿µ¾î´Â ¾ÆÁÖ ÀûÀıÇÏÁö ¾ÊÀº ¸ğµ¨Ã³·³ º¸ÀÎ´Ù.
 
-A certain base level of design and coding skill is required, of course, but I expect almost anybody seriously
-thinking of launching a bazaar effort will already be above that minimum. The open-source community's
-internal market in reputation exerts subtle pressure on people not to launch development efforts they're
-not competent to follow through on. So far this seems to have worked pretty well.
+ÀÌ´Â ¿µ¾î¿Í ºñ½ÁÇÑ ¹®¹ıÀ» ÇÇÇÏ´Â ³ªÀÇ ÀÌÀ¯´Â ¾Æ´Ï´Ù; ³ª´Â ÀÌ¸¦ µÚÁı±â À§ÇØ ¾ğ±ŞÇÏ¿´´Ù. ¸Å¿ì Àú·ÅÇÑ È¸·Î¿Í ÄÚ¾î¸¦ °¡Áö°í, °£°áÇÔÀº ±×°ÍÀ¸·Î ³¡³ª¸é ¾ÈµÈ´Ù. ¿À´Ã³¯ ¾ğ¾î°¡ ÄÄÇ»ÅÍ¸¦ À§ÇØ Àú·ÅÇÑ °Íº¸´Ù´Â ÀÎ°£µéÀ» À§ÇØ Æí¸®ÇÑ °ÍÀÌ ´õ Áß¿äÇÏ´Ù.
 
-There is another kind of skill not normally associated with software development which I think is as
-important as design cleverness to bazaar projectsâ€”and it may be more important. A bazaar project
-coordinator or leader must have good people and communications skills.
+±×·¯³ª, Á¶½ÉÇØ¾ßÇÏ´Â ÁÁÀº ÀÌÀ¯µéÀÌ ¿©ÀüÈ÷ ³²¾ÆÀÖ´Ù. ÇÏ³ª´Â ÆÄ½Ì ´Ü°èÀÇ º¹ÀâÇÑ ºñ¿ëÀÌ´Ù-´ç½ÅÀº ºñ¿ëÀÌ ¹ö±×ÀÇ Áß¿äÇÑ ¿øÀÎÀÌ µÇ°Å³ª ±×°Í ÀÚÃ¼·Î »ç¿ëÀÚÀÇ È¥¶õÀ» ºÒ·¯ÀÏÀ¸Å°´Â ÁöÁ¡À¸·Î ±îÁö Áõ°¡ÇÏÁö ¾Ê±â¸¦ ¿øÇÑ´Ù. ¶Ç´Ù¸¥ ÀÌÀ¯´Â ¾ğ¾î¹®¹ıÀ» ¿µ¾îÃ³·³ ¸¸µå´Â °ÍÀº Á¾Á¾ "¿µ¾î" ±× ÀÚÃ¼°¡ ½É°¢ÇÏ°Ô ÇüÅÂ¸¦ ¹ş¾î³ª±â ¶§¹®ÀÌ´Ù, µû¶ó¼­ ÀÚ¿¬¾î¿¡ ÇÇ»óÀûÀ¸·Î ´àÀº °ÍÀº ÀüÅëÀûÀÎ ¹®¹ıÀÌ °¡Á®¿Ô´ø °ÍÃ³·³ È¥¶õ½º·´´Ù. (´ç½ÅÀº ÀÌ·± ¾Ç¿µÇâÀ» ¼ÒÀ§ ¸»ÇÏ´Â "4¼¼´ë"¿Í »ó¾÷ÀûÀÎ µ¥ÀÌÅÍº£ÀÌ½º ÁúÀÇ¾î¿¡¼­ º¸¾Æ¿Ô´Ù)
 
-This should be obvious. In order to build a development community, you need to attract people, interest
-them in what you're doing, and keep them happy about the amount of work they're doing. Technical sizzle
-will go a long way towards accomplishing this, but it's far from the whole story. The personality you project
-matters, too.
-
-It is not a coincidence that Linus is a nice guy who makes people like him and want to help him. It's not a
-coincidence that I'm an energetic extrovert who enjoys working a crowd and has some of the delivery and
+ÀÎÃâ ¸ŞÀÏ Á¦¾î ¹®¹ıÀº ÀÌ·¯ÇÑ ¹®Á¦µéÀ» ÇÇÇÏ´Â °ÍÃ³·³ º¸ÀÎ´Ù, ¿Ö³ÄÇÏ¸é ÀÌ ¾ğ¾î ¿µ¿ªÀº ¸Å¿ì Á¦ÇÑµÇ¾î ÀÖ±â ¶§¹®ÀÌ´Ù. ÀÌ´Â ¹ü¿ë ¸ñÀûÀÇ ¾ğ¾î ±ÙÃ³¿¡ ¾îµğ¿¡µµ ¾ø´Ù; ÀÌ°ÍÀÌ °£´ÜÈ÷ ¸»ÇÏ´Â ¹Ù´Â ±×·¸°Ô º¹ÀâÇÏÁö´Â ¾Ê´Ù, µû¶ó¼­ ¿µ¾îÀÇ ¸Å¿ì ÀÛÀº ÀÏºÎ¿Í ½ÇÁ¦ Á¦¾î ¾ğ¾î »çÀÌ¿¡ Á¤½ÅÀûÀ¸·Î ÀÌµ¿ÇÏ´Â °ÍÀÇ È¥¶õÀº ¸Å¿ì ÀûÀº °¡´É¼ºÀÌ ÀÖ´Ù. ³ª´Â ÀÌ·± °Í¿¡ ´õ ³Ğ°Ô ¹è¿ï Á¡ÀÌ ÀÖ´Ù°í »ı°¢ÇÑ´Ù;
 
 
-instincts of a stand-up comic. To make the bazaar model work, it helps enormously if you have at least a
-little skill at charming people.
+16. ´ç½ÅÀÇ ¾ğ¾î°¡ Turing-complete °¡±îÀÌ¿¡ ¾ø´Ù¸é, ¹®¹ıÀû ¼³ÅÁÀº ´ç½ÅÀÇ Ä£±¸°¡ µÉ °ÍÀÌ´Ù.
 
-## The Social Context of Open-Source Software
+¶Ç´Ù¸¥ ¹è¿ï Á¡Àº ¸ğÈ£ÇÔ¿¡ ÀÇÇÑ º¸¾È¿¡ °üÇÑ °ÍÀÌ´Ù. ¸î¸î ÀÎÃâ ¸ŞÀÏ »ç¿ëÀÚµéÀº ³ª¿¡°Ô rcÆÄÀÏ¿¡¼­ ºñ¹Ğ¹øÈ£¸¦ ¾ÏÈ£È­ÇÑÃ¤ ÀúÀå ÇÔÀ¸·Î¼­ ½ºÆÄÀÌ°¡ ±×µéÀ» º¸Áö ¾Êµµ·Ï ¼ÒÇÁÆ®¿ş¾î¸¦ ¹Ù²ã ´Ş¶ó°í ¿ä±¸ÇÑ´Ù.
 
-It is truly written: the best hacks start out as personal solutions to the author's everyday problems, and
-spread because the problem turns out to be typical for a large class of users. This takes us back to the
-matter of rule 1, restated in a perhaps more useful way:
+³ª´Â ÀÌ°ÍÀ» ¹Ù²ÙÁö ¾Ê´Â´Ù, ¿Ö³ÄÇÏ¸é ÀÌ°ÍÀÌ »ç½Ç»ó º¸È£¸¦ Ãß°¡ÇÏÁö ¾Ê±â ¶§¹®ÀÌ´Ù. ´ç½ÅÀÇ rc ÆÄÀÏÀ» ÀĞµµ·Ï Çã°¡¸¦ ¹ŞÀº »ç¶÷ ´©±¸³ª ¾îÂ·µç ´ç½ÅÃ³·³ ÀÎÃâ ¸ŞÀÏÀ» °ü¸®ÇÒ ¼ö ÀÖ´Ù-±×¸®°í ±×µéÀÌ Ã£´Â °ÍÀÌ ´ç½ÅÀÇ ºñ¹Ğ¹øÈ£¶ó¸é, ±×µéÀº ÇÊ¿äÇÑ ÇØµ¶±â(decoder)¸¦ °®±â À§ÇØ ÀÌ¸¦ ÀÎÃâ ¸ŞÀÏ ÄÚµå¿Í ¶¼¾î³¾ ¼ö ÀÖ´Ù.
 
-18. To solve an interesting problem, start by finding a problem that is interesting to you.
-
-So it was with Carl Harris and the ancestral popclient, and so with me and fetchmail. But this has been
-understood for a long time. The interesting point, the point that the histories of Linux and fetchmail seem
-to demand we focus on, is the next stageâ€”the evolution of software in the presence of a large and active
-community of users and co-developers.
-
-In The Mythical Man-Month, Fred Brooks observed that programmer time is not fungible; adding developers
-to a late software project makes it later. As we've seen previously, he argued that the complexity and
-communication costs of a project rise with the square of the number of developers, while work done only
-rises linearly. Brooks's Law has been widely regarded as a truism. But we've examined in this essay an
-number of ways in which the process of open-source development falsifies the assumptionms behind itâ€”
-and, empirically, if Brooks's Law were the whole picture Linux would be impossible.
-
-Gerald Weinberg's classic The Psychology of Computer Programming supplied what, in hindsight, we can
-see as a vital correction to Brooks. In his discussion of ''egoless programming'', Weinberg observed that in
-shops where developers are not territorial about their code, and encourage other people to look for bugs
-and potential improvements in it, improvement happens dramatically faster than elsewhere. (Recently, Kent
-Beck's 'extreme programming' technique of deploying coders in pairs looking over one anothers' shoulders
-might be seen as an attempt to force this effect.)
-
-Weinberg's choice of terminology has perhaps prevented his analysis from gaining the acceptance it
-deservedâ€”one has to smile at the thought of describing Internet hackers as ''egoless''. But I think his
-argument looks more compelling today than ever.
-
-The bazaar method, by harnessing the full power of the ''egoless programming'' effect, strongly mitigates
-the effect of Brooks's Law. The principle behind Brooks's Law is not repealed, but given a large developer
-population and cheap communications its effects can be swamped by competing nonlinearities that are not
-otherwise visible. This resembles the relationship between Newtonian and Einsteinian physicsâ€”the older
-system is still valid at low energies, but if you push mass and velocity high enough you get surprises like
-nuclear explosions or Linux.
-
-The history of Unix should have prepared us for what we're learning from Linux (and what I've verified
+ÀÎÃâ ¸ŞÀÏ ºñ¹Ğ¹øÈ£ ¾ÏÈ£È­°¡ Çß´ø ¸ğµç °ÍÀº Àß »ı°¢ÇÏÁö ¾Ê´Â »ç¶÷µé¿¡°Ô º¸¾È¿¡ ´ëÇÑ Àß¸øµÈ ÀÎ½ÄÀ» ÁÖ´Â °ÍÀÌ´Ù. ¹ü¿ëÀûÀÎ ±ÔÄ¢Àº ¿©±â ÀÖ´Ù;
 
 
-experimentally on a smaller scale by deliberately copying Linus's methods [EGCS]). That is, while coding
+17. º¸¾È ½Ã½ºÅÛÀº ±×°ÍÀÇ ºñ¹Ğ¸¸Å­ÀÌ³ª ¾ÈÀüÇÏ´Ù. °¡Â¥ ºñ¹ĞÀ» Á¶½ÉÇÏ¶ó.
+
+## ½ÃÀå(Bazaar) ½ºÅ¸ÀÏÀ» À§ÇÑ ÇÊ¿äÇÑ ÀüÁ¦Á¶°Ç
+
+ÀÌ·± ³í¹®ÀÇ ÃÊ±â °Ë½ÃÀÚµé°ú ½ÃÇè µ¶ÀÚµéÀº Áö¼ÓÀûÀ¸·Î, ÇÏ³ª°¡ °ø°øÀûÀÌ°Ô µÇ°í °øµ¿ °³¹ßÀÚ Ä¿¹Â´ÏÆ¼¸¦ »ı¼ºÇÏ±â ½ÃÀÛÇÏ´Â ±×¶§¿¡ ÇÁ·ÎÁ§Æ® ¸®´õÀÇ ÀÚ°İ°ú ÄÚµåÀÇ »óÅÂ ¸ğµÎ¸¦ Æ÷ÇÔÇÑ ¼º°øÀûÀÎ ½ÃÀå-½ºÅ¸ÀÏ °³¹ß¿¡ ´ëÇÑ ÀüÁ¦Á¶°Çµé¿¡ °ü·ÃµÈ Áú¹®À» Á¦±âÇß´Ù.
+
+½ÃÀå ½ºÅ¸ÀÏ¿¡¼­ °³ÀÎ ÇÑ¸íÀÌ ÄÚµå¸¦ Ã³À½ºÎÅÍ ÀÛ¼ºÇÏÁö ¸øÇÏ´Â °ÍÀº ²Ï ºĞ¸íÇÏ´Ù. ¾î¶² ÇÑ¸íÀº ½ÃÇè°ú µğ¹ö±×, ±×¸®°í ½ÃÀå ½ºÅ¸ÀÏ·Î ¹ßÀü½ÃÅ³ ¼ö ÀÖ´Ù, ±×·¯³ª ½ÃÀå ¸ğµå·Î ÇÁ·ÎÁ§Æ®¸¦ »ı¼ºÇÏ´Â °ÍÀº ¸Å¿ì ¾î·Æ´Ù. ¸®´ª½º´Â ÀÌ¸¦ ½ÃµµÇÏÁö ¾Ê¾Ò´Ù. ³ªµµ ¸¶Âù°¡ÁöÀÌ´Ù. ´ç½ÅÀÇ ÃÊ±â °³¹ßÀÚ Ä¿¹Â´ÏÆ¼´Â ½ÇÇàÇÒ ¸¸ÇÑ ±×¸®°í ½ÃÇèÇØ º¼¸¸ÇÑ ¹«¾ğ°¡¸¦ °¡Áú ÇÊ¿ä°¡ ÀÖ´Ù.
+
+´ç½ÅÀÌ Ä¿¹Â´ÏÆ¼¸¦ Á¦ÀÛÇÏ±â ½ÃÀÛÇßÀ» ¶§, ´ç½ÅÀÌ Á¦½ÃÇÒ ¼ö ÀÖ´Â °ÍÀº 'Å¸´çÇÑ ¾à¼Ó'ÀÌ´Ù. ´ç½ÅÀÇ ÇÁ·Î±×·¥Àº Æ¯Á¤ÀûÀ¸·Î Àß µ¹¾Æ°¥ ÇÊ¿ä°¡ ¾ø´Ù. ´ëÃæ ¸¸µé°Å³ª, ¹ö±×°¡ ¸¹°Å³ª, ºÒ¿ÏÀüÇÏ°Å³ª, ±×¸®°í Àß ¹®¼­·Î ÀÛ¼ºµÇÁö ¾ÊÀ» ¼ö ÀÖ´Ù. ½ÇÆĞÇÏÁö ¸»¾Æ¾ßÇÏ´Â °ÍÀº (a) µ¹¾Æ°¡´Â °Í, ±×¸®°í (b) °¡´É¼ºÀÌ ÀÖ´Â °øµ¿ °³¹ßÀÚµé¿¡°Ô ÀÌ°ÍÀÌ ¿¹Ãø°¡´ÉÇÑ ¹Ì·¡¿¡ ºĞ¸íÈ÷ ´ÜÁ¤ÇÏ°Ô µÉ °ÍÀ¸·Î ¹ßÀü ÇÒ ¼ö ÀÖ´Ù°í ¼³µæÇÏ´Â °ÍÀÌ´Ù.
+
+¸®´ª½º¿Í ÀÎÃâ ¸ŞÀÏ ¸ğµÎ °­ÇÏ°í ¸Å·ÂÀûÀÎ ±âº» ¼³°è·Î¼­ °ø°øÀÌ µÇ¾ú´Ù. ³»°¡ ¹ßÇ¥ÇÑ ¹Ù¿Í °°ÀÌ ½ÃÀå¸ğµ¨À» »ı°¢ÇÏ´Â ¸¹Àº »ç¶÷µéÀº ÀÌ°ÍÀÌ ÀÌ·¯ÇÑ À§ÇèÀ» Á¤È®È÷ °í·ÁÇÏ°í ÀÖ°í, ±×¸®°í ³ôÀº ¼öÁØÀÇ ¼³°è Á÷°ü°ú ÇÁ·ÎÁ§Æ® ¸®´õÀÇ ¸í¼®ÇÔÀº ´ëÃ¼ ºÒ°¡ÀûÀÌ¶ó´Â °á·Ğ¿¡ µµ´ŞÇÏ¿´´Ù.
+
+±×·¯³ª ¸®´ª½º´Â À¯´Ğ½º·ÎºÎÅÍ ±×ÀÇ ¼³°è¸¦ °¡Á®¿Ô´Ù. ³ª´Â Ã³À½¿¡ Àü·¡ÀÇ popclient·Î ºÎÅÍ ³» °ÍÀ» °¡Á®¿Ô´Ù. (ºñ·Ï ÀÌ°ÍÀÌ ³ªÁß¿¡ ¸®´ª½º°¡ °ÅÃÄ¿Ô´ø °Íº¸´Ù ¸¹Àº ¾çÀÇ ÀÌ¾ß±â¸¦ ¹Ù²Ù¾ú´õ¶óµµ). µû¶ó¼­, ½ÃÀå ½ºÅ¸ÀÏ¿¡¼­ÀÇ ¸®´õ/ÁøÇàÀÚ´Â ¸Å¿ì ¶Ù¾î³­ ¼³°è ´É·ÂÀ» °¡Áö°í ÀÖ¾î¾ß ÇÏ´Â °ÍÀÎ°¡? ¶Ç´Â ±×°¡ ´Ù¸¥ »ç¶÷µéÀÇ ¼³°è Àç´ÉÀ» ¿ÜºÎ·ÎºÎÅÍ °¡Á®¿Ã ¼ö ÀÖ¾î¾ß ÇÏ´Â °ÍÀÎ°¡?
+³ª´Â Á¶Á¤ÀÚ°¡ ¸Å¿ì ¶Ù¾î³­ ¼öÁØÀÇ ¼³°è¸¦ ¸¸µé¾î³¾ ¼ö ÀÖ´Â °ÍÀº Áß¿äÇÏÁö ¾Ê´Ù°í »ı°¢ÇÑ´Ù, ±×·¯³ª Á¶Á¤ÀÚ°¡ ´Ù¸¥ »ç¶÷À¸·ÎºÎÅÍ ÁÁÀº ¼³°è ¾ÆÀÌµğ¾î¸¦ ÀÎÁöÇÒ ÁÙ ¾Æ´Â ´É·ÂÀº ¸Å¿ì Áß¿äÇÏ´Ù°í »ı°¢ÇÑ´Ù.
+
+¸®´ª½º¿Í ÀÎÃâ ¸ŞÀÏ ÇÁ·ÎÁ§Æ® ¸ğµÎ ÀÌ·¯ÇÑ Áõ°Å¸¦ º¸¿©ÁÖ°í ÀÖ´Ù. ¾Õ¼­ ¾ğ±ŞµÈ ¸Å¿ì ¾öÃ»³­ µ¶Ã¢ÀûÀÎ ¼³°èÀÚ°¡ ¾Æ´Ñ ¸®´ª½º´Â ÁÁÀº ¼³°è¸¦ ¾Ë¾Æº¸´Â °Í°ú ±×°ÍÀ» ¸®´ª½º Ä¿³Î¿¡ ÅëÇÕ½ÃÅ°´Â ¾öÃ»³­ ÀçÁÖ¸¦ º¸¿©ÁÖ¾ú´Ù. ±×¸®°í ³ª´Â ÀÎÃâ ¸ŞÀÏ¿¡¼­ÀÇ ÇÏ³ªÀÇ ¸Å¿ì °­·ÂÇÑ ¼³°è ¾ÆÀÌµğ¾î(SMTP Æ÷¿öµù)°¡ ´©±º°¡ ·ÎºÎÅÍ ¾î¶»°Ô ³ª¿À´ÂÁö ÀÌ¹Ì ¼³¸íÇØ¿Ô´Ù.
+
+ÀÌ ³í¹®ÀÇ ÃÊ±â µ¶ÀÚµéÀº ³»°¡ ³ª ½º½º·Î ¸¹Àº °ÍÀ» °¡Áö°í ÀÖ±â ¶§¹®¿¡, ½ÃÀå ÇÁ·ÎÁ§Æ®¿¡¼­ ¼³°è ¿øÁ¶¼ºÀ» °ú¼ÒÆò°¡ÇÏ±â ½¬¿ì¸ç, µû¶ó¼­ ±× Á¡À» ¿°µÎÇØ¾ß ÇÑ´Ù°í Á¦¾È ÇÔÀ¸·Î¼­ ³ª¸¦ °İ·ÁÇß´Ù. ÀÌ´Â Áø½ÇÀÏ ¼öµµ ÀÖ´Ù; (ÄÚµù ¶Ç´Â µğ¹ö±ë°ú´Â ¹İ´ë·Î) ¼³°è´Â ³ªÀÇ °¡Àå °­·ÂÇÑ ±â¼úÀÌ´Ù.
+
+±×·¯³ª ¼ÒÇÁÆ®¿ş¾î µğÀÚÀÎ¿¡ ¸í¼®ÇÏ°í µ¶Ã¢ÀûÀÌ°Ô µÇ´Â ¹®Á¦´Â ½À°üÀÌ µÈ´Ù´Â °ÍÀÌ´Ù-´ç½ÅÀÌ ±×°ÍµéÀ» Æ°Æ°ÇÏ°í °£´ÜÇÏ°Ô À¯ÁöÇØ¾ßÇÒ ¶§ ´ç½ÅÀº ¹İ»çÀûÀ¸·Î ±×°ÍµéÀ» ¾öÃ»³ª°í º¹ÀâÇÏ°Ô ¸¸µé¾î ¹ö¸®±â ½ÃÀÛÇÑ´Ù. ³ª´Â ³»°¡ ÀÌ·¯ÇÑ ½Ç¼ö¸¦ Çß±â ¶§¹®¿¡ ÇÁ·ÎÁ§Æ®µéÀÌ ½ÇÆĞÇÏ¿´¾úÁö¸¸, ÀÎÃâ ¸ŞÀÏ¿¡ ÀÖ¾î¼­´Â ÀÌÁ¡À» ÇÇÇÏ±â·Î ´ÙÁüÇß´Ù.
+
+µû¶ó¼­ ³ª´Â ³»°¡ ¸í¼®ÇØ Áö·Á´Â ³ªÀÇ °æÇâÀ» ¾ïÁ¦Çß±â ¶§¹®¿¡, ÀÎÃâ ¸ŞÀÏÀÌ ºÎºĞÀûÀ¸·Î ¼º°øÇß´Ù°í ¹Ï´Â´Ù; ÀÌ°ÍÀº (Àû¾îµµ) ¼º°øÀûÀÎ ½ÃÀå ÇÁ·ÎÁ§Æ®µéÀ» À§ÇØ¼­ ¼³°è µ¶Ã¢¼º¿¡ ¹İÇÑ´Ù°í ÁÖÀåÇÑ´Ù. ±×¸®°í ¸®´ª½ºÀÇ °æ¿ì¸¦ »ı°¢ÇØº¸¶ó. ¸®´ª½º Åä¹ßÁî°¡ °³¹ß Áß¿¡ ¿î¿µÃ¼Á¦ ¼³°è¿¡ ÀÖ¾î¼­ ±Ùº»ÀûÀÎ Çõ½ÅµéÀ» Çõ½Å ½ÃÄÑ¿Ô´Ù°í »ı°¢ÇØº¸ÀÚ; ¿ì¸®°¡ ÀÌ¹Ì °¡Áö°íÀÖ´Â °ÍÃ³·³ Ä¿³ÎÀÌ ¾ÈÀüÇÏ°í ¼º°øÀûÀÌ°Ô µÇ¾úÀ»±î?
+
+¼³°è¿Í ÄÚµù¿¡ ´ëÇÑ ÀÏÁ¤ ±âº»ÀûÀÎ ¼öÁØÀº ¹°·Ğ ÇÊ¿äÇÏ´Ù, ±×·¯³ª ³ª´Â ½ÃÀå ³ë·ÂÀ» ±â¿ïÀÌ´Â °ÍÀ» ½É°¢ÇÏ°Ô »ı°¢ÇÏ´Â °ÅÀÇ ´ëºÎºĞÀÇ »ç¶÷µéÀÌ ±× ´É·ÂÀÇ ÃÖ¼ÒÄ¡¸¦ ÀÌ¹Ì ´É°¡ÇÑ´Ù°í »ı°¢ÇÑ´Ù. ¸í¼º ÀÖ´Â ¿ÀÇÂ¼Ò½º Ä¿¹Â´ÏÆ¼ÀÇ ³»ºÎ ½ÃÀåÀº °úÁ¤À» µû¶ó°¡Áö ¸øÇÒ Á¤µµ·Î À¯´ÉÇÏÁö ¾Ê´Â »ç¶÷µéÀÌ °³¹ß ³ë·ÂÀ» ±â¿ïÀÌÁö ¾Êµµ·Ï »ç¶÷µé¿¡°Ô ¹Ì¹¦ÇÑ ¾Ğ·ÂÀ» Çà»çÇÑ´Ù. Áö±İ±îÁö ÀÌ°ÍÀÌ ²Ï Àß Àû¿ëµÇ°í ÀÖ´Â °ÍÃ³·³ º¸ÀÎ´Ù.
+
+³»°¡ ½ÃÀå ÇÁ·ÎÁ§Æ®¿¡ ÀÖ¾î¼­ ¶Ù¾î³­ ¼³°è ´É·Â¸¸Å­ÀÌ³ª Áß¿äÇÑ-±×¸®°í ´õ¿í Áß¿äÇÒÁöµµ ¸ğ¸£´Â, ¼ÒÇÁÆ®¿ş¾î °³¹ß°ú ¿¬°üµÇÁö ¾ÊÀº ¶Ç´Ù¸¥ Á¾·ùÀÇ ±â¼úÀÌ ÀÖ´Ù. ½ÃÀå ÇÁ·ÎÁ§Æ®ÀÇ Á¶Á¤ÀÚ³ª ¸®´õ´Â ¹İµå½Ã ÁÁÀº »ç¶÷µé°ú ÀÇ»ç¼ÒÅë ´É·ÂÀ» °¡Áö°í ÀÖ¾î¾ß ÇÑ´Ù.
+
+ÀÌ´Â ¸Å¿ì ¸íÈ®ÇØ¾ß ÇÑ´Ù. °³¹ß Ä¿¹Â´ÏÆ¼¸¦ ¸¸µé±â À§ÇØ¼­´Â, ´ç½ÅÀº »ç¶÷µéÀ» ²ø¾îµéÀÌ°í, ´ç½ÅÀÌ Áö±İ ÇÏ´Â ÀÏ¿¡ Èï¹Ì¸¦ ºÙÀÌ°Ô ¸¸µé°í, ±×¸®°í ±×µéÀÌ ÇÏ´Â ÀÏÀÇ ¾ç¿¡ ´ëÇØ ±×µéÀÌ Çàº¹À» ´À³¢°Ô²û ÇØ¾ß ÇÑ´Ù. ±â¼úÀûÀ¸·Î ÁÁÀº ¼ºÀûÀ» ¿Ã¸®´Â °ÍÀº ÀÌÁ¡À» ¼ºÃëÇÏ´Â ¹æÇâÀ¸·Î ³ª¾Æ°¥ °ÍÀÌÁö¸¸, ÀüÃ¼ ½ºÅä¸®¿Í´Â °Å¸®°¡ ¸Ö´Ù. ´ç½ÅÀÌ ³ªÅ¸³»´Â ¼º°İ ¶ÇÇÑ ¹®Á¦°¡ µÈ´Ù.
+
+¸®´ª½º°¡ »ç¶÷µéÀÌ ±×¸¦ ÁÁ¾ÆÇÏ°í ±×¸¦ µµ¿ÍÁÖ´Â °ÍÀ» ÁÁ¾ÆÇÏ´Â °ÍÀº ¿ì¿¬ÀÇ ÀÏÄ¡°¡ ¾Æ´Ï´Ù. ³»°¡ ´ëÁß°ú ÀÏÇÏ°í ¿ø¸Ç¼î ÄÚ¹ÌµğÀÇ ±³ÈÆ°ú ÀÚ±ØÀ» ¹Ş°í ÀÖ´Â È°±â ³ÑÄ¡´Â ¿ÜÇâÀûÀÎ »ç¶÷ÀÎ °ÍÀº ¿ì¿¬ÀÇ ÀÏÄ¡°¡ ¾Æ´Ï´Ù. ½ÃÀå ¸ğµ¨ÀÌ Àß µ¹¾Æ°¡°Ô ÇÏ±â À§ÇØ¼­´Â, ´ç½ÅÀÌ ÃÖ¼ÒÇÑ »ç¶÷µéÀ» ±â»Ú°Ô ÇÏ´Â °Í¿¡ ¾ÆÁÖ ÀÛÀº ´É·ÂÀÌ¶óµµ ÀÖ´ÂÁö´Â ¾öÃ»³­ µµ¿òÀÌ µÈ´Ù.
+
+
+## ¿ÀÇÂ¼Ò½º ¼ÒÇÁÆ®¿ş¾î¿¡ ´ëÇÑ »çÈ¸Àû ¹®¸Æ
+
+ÀÌ´Â ºĞ¸íÈ÷ ±â·ÏµÈ´Ù: ÃÖ°íÀÇ hack´Â ±Û¾´ÀÌÀÇ ÀÏ»ó»ıÈ° ¹®Á¦µé¿¡ ´ëÇÑ °³ÀÎÀûÀÎ ÇØ°áÃ¥À¸·Î ½ÃÀÛÇØ¼­ ÆÛÁø´Ù, ¿Ö³ÄÇÏ¸é ±× ¹®Á¦´Â »ç¿ëÀÚµéÀÇ ´ë±Ô¸ğ Áı´Ü¿¡ ´ëÇÑ ÀüÇüÀûÀÎ ¹®Á¦·Î º¯¸ğÇÏ±â ¶§¹®ÀÌ´Ù.
+
+18. Èï¹Ì·Î¿î ¹®Á¦¸¦ ÇØ°áÇÏ±â À§ÇØ¼­´Â, ´ç½ÅÀÌ Èï¹Ì¸¦ ´À³¢´Â ¹®Á¦ºÎÅÍ Ã£¾Æº¸±â ½ÃÀÛÇÏ¶ó
+
+Ä® ÇØ¸®½º¿Í ¿¾³¯ÀÇ ÆËÅ¬¶óÀÌ¾ğÆ®(popclient), ±×¸®°í ³ª¿Í ÀÎÃâ ¸ŞÀÏÀÌ ±×·¯Çß´Ù. ±×·¯³ª ÀÌ´Â ¿À·£ ±â°£µ¿¾È ÀÌÇØµÇ¾î ¿Ô´Ù. Èï¹Ì·Î¿î Á¡, ¸®´ª½º¿Í ÀÎÃâ ¸ŞÀÏÀÇ ¿ª»ç°¡ ¿ì¸®·Î ÇÏ¿©±İ ÁıÁßÇÏ°Ô ²û ÇÏ´Â Á¡Àº ¹Ù·Î ´ÙÀ½ ´Ü°èÀÌ´Ù-»ç¿ëÀÚ¿Í °øµ¿ °³¹ßÀÚÀÇ Å©°í È°¹ßÇÑ Ä¿¹Â´ÏÆ¼ÀÇ Á¸Àç ¾È¿¡¼­ÀÇ ¼ÒÇÁÆ®¿ş¾îÀÇ ¹ßÀüÀÌ´Ù.
+
+The Mythical Man-Month¿¡¼­´Â, ÇÁ·¹µå ºê·è½º´Â ÇÁ·Î±×·¡¸Ó ½Ã°£ÀÌ ´ëÃ¼ °¡´ÉÇÏÁö ¾Ê´Ù°í ÁÖÀåÇÑ´Ù; ³ªÁß¿¡ ¼ÒÇÁÆ®¿ş¾î ÇÁ·ÎÁ§Æ®¿¡ °³¹ßÀÚ¸¦ ÅõÀÔÇÏ´Â °ÍÀº ÀÌ¸¦ ´Ê°Ô ¸¸µç´Ù. ¿ì¸®°¡ ¾Õ¼­ ºÁ¿Â ¹Ù¿Í °°ÀÌ, ±×´Â ÀÛ¾÷·®Àº ¿ÀÁ÷ ÀÏÁ÷¼±»óÀ¸·Î Áõ°¡ÇÔ°ú ´Ş¸®, ÇÁ·ÎÁ§Æ®ÀÇ º¹Àâµµ¿Í ÀÇ»ç¼ÒÅë ºñ¿ëÀº °³¹ßÀÚ ¼öÀÇ Á¦°öÀ¸·Î Áõ°¡ÇÑ´Ù°í ÁÖÀåÇÑ´Ù. ºê·è½ºÀÇ ¹ıÄ¢Àº Áø¸®·Î¼­ ³Î¸® ¹Ş¾Æµé¿©Áø´Ù. ±×·¯³ª ¿ì¸®´Â ÀÌ ³í¹®¿¡¼­ ¿ÀÇÂ¼Ò½º °³¹ßÀÇ °úÁ¤¿¡ ÀÖ¾î¼­ ¼ö¸¹Àº ¹æ¹ıµéÀÌ ÀÌ°Í¿¡ ¼û°ÜÁø °¡Á¤¿¡ ¾î±ß³²À» º¸¾Ò´Ù-±×¸®°í, °æÇè¿¡ ±âÀÎÇÏ¿©, ¸¸¾à¿¡ ºê·è½ºÀÇ ¹ıÄ¢ÀÌ ÀüÃ¼ Æ²ÀÌ¾ú´Ù¸é ¸®´ª½º´Â ºÒ°¡´ÉÇßÀ» °ÍÀÓÀ» ¾Ë¾Ò´Ù.
+
+Á¦·Ñµå ¿şÀÎ¹ö±×ÀÇ ÀüÇüÀûÀÎ 'ÄÄÇ»ÅÍ ÇÁ·Î±×·¡¹ÖÀÇ ½É¸®ÇĞ(The Psychology of Computer Programming)'Àº, Áö³ª°í ³ª¼­ º¸´Ï, ºê·è½º¿¡ ´ëÇÑ ÇÊ¿äÇÑ Á¤Á¤À» ¹«¾ùÀ¸·Î º¼ ¼ö ÀÖ´ÂÁö¸¦ Á¦¾ÈÇÑ´Ù. "°´°üÈ­ ÇÁ·Î±×·¡¹Ö(egoless programming)"¿¡ ´ëÇÑ ±×ÀÇ ÁÖÀå¿¡ µû¸£¸é, ¿şÀÎ¹ö±×´Â, °³¹ßÀÚµéÀÌ ±×µéÀÇ ÄÚµå¿¡ ´ëÇØ ÅÔ¼¼¸¦ ºÎ¸®Áö ¾Ê°í, ´Ù¸¥ »ç¶÷µé·Î ÇÏ¿©±İ ±× ¾È¿¡ ÀÖ´Â ¹ö±×¿Í °¡´É¼º ÀÖ´Â Çâ»óÀ» º¸µµ·Ï °İ·ÁÇÏ´Â Á÷Àå¿¡¼­´Â, Çâ»óÀÌ ´Ù¸¥ ¾î¶² °÷¿¡¼­ º¸´Ù ¸Å¿ì ºü¸£°Ô ³ªÅ¸³­´Ù°í ÁÖÀåÇÑ´Ù. (ÃÖ±Ù¿¡, ÄÚµå Á¦ÀÛÀÚµéÀÌ Â¦À» ÀÌ·ç¾î ´Ù¸¥ »ç¶÷ °ÍµéÀ» º¸µµ·Ï °í¿ëÇÏ´Â, ÄËÆ® º¤ÀÇ '±ØµµÀÇ ÇÁ·Î±×·¡¹Ö (extreme programming)'Àº ÀÌ·¯ÇÑ È¿°ú¸¦ °­È­ÇÏ±â À§ÇÑ ½Ãµµ·Î º¸¿©Áø´Ù.)
+
+Àü¹® ¿ë¾îÀÇ ¿şÀÎ¹ö±×ÀÇ ¼±ÅÃÀº ¾Æ¸¶ ±×ÀÇ ºĞ¼®À¸·Î ÇÏ¿©±İ ÀÌ°ÍÀÌ ¹ŞÀ» ¸¸ÇÑ Çã°¡¸¦ ¾ò´Â °ÍÀ» ¸·°íÀÖ´Ù-ÇÑ »ç¶÷Àº ¹İµå½Ã ÀÎÅÍ³İ ÇØÄ¿µéÀ» "°´°üÀû" ÀÌ¶ó°í ¹¦»çÇÏ´Â »ı°¢¿¡ µ¿ÀÇ¸¦ ÇØ¾ß ÇÑ´Ù. ±×·¯³ª ³ª´Â ±×ÀÇ ÁÖÀåÀÌ ¾î¶² °Íº¸´Ù ´õ¿í ´õ °­·ÂÇÏ´Ù°í ¹Ï´Â´Ù.
+
+"°´°üÈ­ ÇÁ·Î±×·¡¹Ö" È¿°úÀÇ ¿ÏÀüÇÑ ÈûÀ» ÀÌ¿ëÇÏ´Â ½ÃÀå ¹æ¹ıÀº ºê·è½ºÀÇ ¹ıÄ¢À» ¿Ïº®È÷ ¿ÏÈ­ÇÑ´Ù. ºê·è½ºÀÇ ¹ıÄ¢¿¡ ¼û°ÜÁø ¿ø¸®µéÀº »ç¶óÁöÁö´Â ¾ÊÁö¸¸, ´ë±Ô¸ğÀÇ °³¹ßÀÚ ÀÎ±¸¿Í ºÎ½ÇÇÑ ÀÇ»ç¼ÒÅëÀÌ ÁÖ¾îÁ³À» ¶§´Â ÀÌ°ÍÀÇ È¿°ú´Â ´Ù¸¥ ¹æ¹ıµé·Î´Â º¼ ¼ö ¾ø´Â °æÀïÀûÀÎ ºñ¼±Çü¼º¿¡ ÀÇÇØ ¾ĞµµµÉ ¼ö ÀÖ´Ù. ÀÌ Á¡Àº ´ºÅÏ°ú ¾ÆÀÌ½´Å¸ÀÎÀÇ ¹°¸®ÇĞ »çÀÌÀÇ °ü°è¿Í ºñ½ÁÇÏ´Ù-¿¹ÀüÀÇ ½Ã½ºÅÛÀº ÀÛÀº ¿¡³ÊÁö·Î ¿©ÀüÈ÷ À¯È¿ÇÏÁö¸¸, ¸¸¾à ´ç½ÅÀÌ ¾öÃ»³ª°Ô Å« ¾ç°ú ÃæºĞÈ÷ ºü¸¥ ¼Óµµ¸¦ ÅõÀÔÇÑ´Ù¸é ´ç½ÅÀº ÇÙ Æø¹ßÀÌ³ª ¸®´ª½º°¡ »ı±ä °ÍÃ³·³ ³î¶ó°Ô µÉ °ÍÀÌ´Ù.
+
+À¯´Ğ½ºÀÇ ¿ª»ç´Â ¿ì¸®°¡ ¸®´ª½º ·ÎºÎÅÍ ¹è¿î °Í(±×¸®°í ¸®´ª½ºÀÇ ¹æ¹ıÀ» ±×´ë·Î µû¶ó ÇÔÀ¸·Î¼­ ¼Ò±Ô¸ğÀÇ ½ÇÇè¿¡¼­ Áõ¸íÇÑ °Í)À» ÁØºñ½ÃÄ×¾î¾ß Çß´Ù.
+ That is, while coding
 remains an essentially solitary activity, the really great hacks come from harnessing the attention and
 brainpower of entire communities. The developer who uses only his or her own brain in a closed project is
 going to fall behind the developer who knows how to create an open, evolutionary context in which
