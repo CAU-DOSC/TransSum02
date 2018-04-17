@@ -19,7 +19,7 @@ CathedralAndBazaarOrgByEsr.md에 요약했습니다.
 Progress
 --------
 
-| page   | Name | Progress  |
+| pages   | Name | Progress  |
 | ---------- |:----:| ---------:|
 | 1 ~ 5      | 구영서 |       100% |
 | 6 ~ 10     | 권영선 |        0% |
