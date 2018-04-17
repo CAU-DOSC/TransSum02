@@ -1,223 +1,34 @@
-# The Cathedral and the Bazaar
+# 성당과 시장
 
-**Eric Steven Raymond**
+필자는 가장 중요한 소프트웨어 (운영체제나 Emacs 같이 대단히 커다란 커다란 도구들) 은 성당을 건축하듯이, 즉 몇 명의 도사 프로그래머나 작은 그룹의 뛰어난 프로그래머들에 의해 조심스럽게 만들어지고 베타버전도 필요없이 발표되어야 한다고 생각했던 것이다.
 
-**Copyright:** Permission is granted to copy, distribute and/or modify this document under the terms of the
-Open Publication License, version 2.0.
+필자는 리눅스에서 고요하고 신성한 성당의 건축방식은 찾아볼 수 없었다. 대신, 리눅스 공동체는 서로다른 의견과 접근방법이 난무하는 매우 소란스러운 시장같았고 이런 시장바닥에서 조리있고 안정적인 시스템이 나온다는 것은 연속된 기적으로만 가능한 것처럼 보였다. 필자는 시장 스타일이 매우 효과적이라는 사실은 분명히 충격이었고 이를 이해하려고 애썼다.
 
-**Abstract**
+1996년 중반에야 이해가 되기 시작했다. 필자의 이론을 시험해 볼 수 있는 완벽한 기회가 오픈소스 프로젝트의 형태로 찾아왔다. 여기에서 의식적으로 시장 스타일을 시도해 볼 수 있었고, 큰 성공을 거두었다. 이 글의 나머지 부분에서는 그 프로젝트에 대해 이야기하고 효과적인 오픈소스 개발에 대한 격언들을 제시한다.
 
-I anatomize a successful open-source project, fetchmail, that was run as a deliberate test of the surprising
-theories about software engineering suggested by the history of Linux. I discuss these theories in terms of
-two fundamentally different development styles, the ''cathedral'' model of most of the commercial world
-versus the ''bazaar'' model of the Linux world. I show that these models derive from opposing assumptions
-about the nature of the software-debugging task. I then make a sustained argument from the Linux
-experience for the proposition that ''Given enough eyeballs, all bugs are shallow'', suggest productive
-analogies with other self-correcting systems of selfish agents, and conclude with some exploration of the
-implications of this insight for the future of software.
+## 메일은 반드시 통과해야합니다.
 
-**Table of Contents**
+필자는 즉시 배달되는 인터넷 이메일에 매우 익숙해졌다. 복잡한 이유로 인해 집의 컴퓨터와 CCIL 사이에 SLIP 연결을 하기가 힘들었다. 마침내 성공하고 나자, 주기적으로 locke 에 접속해 메일이 왔는지 체크해 보는 것이 매우 귀찮은 일이라는 것을 알게 되었다. 필자는 메일이 snark 로 배달되었을 때 바로 알 수 있고, 자신의 도구들을 가지고 메일을 다룰 수 있게 되는 것을 원했다. 이 과정에서 필요한 클라이언트들 중 필자의 갈증을 해소시켜주지 못했다. 여기에서 첫 번째 교훈을 얻을 수 있다.
 
-The Cathedral and the Bazaar
+1. 소프트웨어의 모든 좋은 작업은 개발자의 개인 가려움증을 긁어 냄으로써 시작된다.
 
-The Mail Must Get Through
+2. 좋은 프로그래머는 어떤 프로그램을 만들어야 할 지 안다. 위대한 프로그래머는 어떤 프로그램을 다시 만들어야 할 지 (그리고 재사용해야 할 지) 안다.
 
-The Importance of Having Users
+3. 한 명을 던질 계획을 세우십시오. 어쨌든, 당신은 할 것입니다. "(프레드 브룩스, 신화 인 달, 11 장)
 
-Release Early, Release Often
+다른 말로 하자면, 첫 번째 해결책을 구현할 때까지도 진짜 문제가 무엇인지 이해하지 못하는 경우가 종종 있다는 것이다. 두 번째가 되어서야 어떻게 하는 것이 옳은 것인지 충분히 알게 될 수 있다. 따라서 만일 올바른 방법을 찾고 싶다면 최소한 한 번은 처음부터 다시 시작할 준비를 해 두어야 한다.
 
-How Many Eyeballs Tame Complexity
+4. 적절한 태도를 가지고 있으면 흥미로운 문제가 당신을 찾아갈 것이다.
 
-When Is a Rose Not a Rose?
+5. 프로그램에 흥미를 잃었다면 프로그램에 대한 당신의 마지막 의무는 능력있는 후임자에게 프로그램을 넘겨주는 것이다.
 
-Popclient becomes Fetchmail
+## 사용자가 있다는 것의 중요성
 
-Fetchmail Grows Up
+사용자들이 있다는 것은 매우 좋은 일이다. 당신이 누군가의 필요를 충족시켜주고 있으며 일을 잘 해나가고 있다는 것을 보여주기 때문만은 아니다. 적절하게 유도해 준다면 사용자들을 공동개발자가 될 수 있다.
 
-A Few More Lessons from Fetchmail
+6. 사용자를 공동 개발자로 취급하는 것은 신속한 코드의 개선과 효과적인 디버깅을위한 가장 간단하고 쉬운 방법이다.
 
-Necessary Preconditions for the Bazaar Style
-
-The Social Context of Open-Source Software
-
-
-## The Cathedral and the Bazaar
-
-Linux is subversive. Who would have thought even five years ago (1991) that a world-class operating system
-could coalesce as if by magic out of part-time hacking by several thousand developers scattered all over
-the planet, connected only by the tenuous strands of the Internet?
-
-Certainly not I. By the time Linux swam onto my radar screen in early 1993, I had already been involved in
-Unix and open-source development for ten years. I was one of the first GNU contributors in the mid-1980s.
-I had released a good deal of open-source software onto the net, developing or co-developing several
-programs (nethack, Emacs's VC and GUD modes, xlife, and others) that are still in wide use today. I thought
-I knew how it was done.
-
-Linux overturned much of what I thought I knew. I had been preaching the Unix gospel of small tools, rapid
-prototyping and evolutionary programming for years. But I also believed there was a certain critical
-complexity above which a more centralized, a priori approach was required. I believed that the most
-important software (operating systems and really large tools like the Emacs programming editor) needed
-to be built like cathedrals, carefully crafted by individual wizards or small bands of mages working in
-splendid isolation, with no beta to be released before its time.
-
-Linus Torvalds's style of development—release early and often, delegate everything you can, be open to
-the point of promiscuity—came as a surprise. No quiet, reverent cathedral-building here—rather, the Linux
-community seemed to resemble a great babbling bazaar of differing agendas and approaches (aptly
-symbolized by the Linux archive sites, who'd take submissions from anyone) out of which a coherent and
-stable system could seemingly emerge only by a succession of miracles.
-
-The fact that this bazaar style seemed to work, and work well, came as a distinct shock. As I learned my
-way around, I worked hard not just at individual projects, but also at trying to understand why the Linux
-world not only didn't fly apart in confusion but seemed to go from strength to strength at a speed barely
-imaginable to cathedral-builders.
-
-By mid-1996 I thought I was beginning to understand. Chance handed me a perfect way to test my theory,
-in the form of an open-source project that I could consciously try to run in the bazaar style. So I did—and
-it was a significant success.
-
-This is the story of that project. I'll use it to propose some aphorisms about effective open-source
-development. Not all of these are things I first learned in the Linux world, but we'll see how the Linux world
-gives them particular point. If I'm correct, they'll help you understand exactly what it is that makes the Linux
-community such a fountain of good software—and, perhaps, they will help you become more productive
-yourself.
-
-
-## The Mail Must Get Through
-
-Since 1993 I'd been running the technical side of a small free-access Internet service provider called Chester
-County InterLink (CCIL) in West Chester, Pennsylvania. I co-founded CCIL and wrote our unique multiuser
-bulletin-board software—you can check it out by telnetting to locke.ccil.org. Today it supports almost three
-thousand users on thirty lines. The job allowed me 24-hour-a-day access to the net through CCIL's 56K
-line—in fact, the job practically demanded it!
-
-I had gotten quite used to instant Internet email. I found having to periodically telnet over to locke to check
-my mail annoying. What I wanted was for my mail to be delivered on snark (my home system) so that I
-would be notified when it arrived and could handle it using all my local tools.
-
-The Internet's native mail forwarding protocol, SMTP (Simple Mail Transfer Protocol), wouldn't suit, because
-it works best when machines are connected full-time, while my personal machine isn't always on the Internet,
-and doesn't have a static IP address. What I needed was a program that would reach out over my
-intermittent dialup connection and pull across my mail to be delivered locally. I knew such things existed,
-and that most of them used a simple application protocol called POP (Post Office Protocol). POP is now
-widely supported by most common mail clients, but at the time, it wasn't built in to the mail reader I was
-using.
-
-I needed a POP3 client. So I went out on the Internet and found one. Actually, I found three or four. I used
-one of them for a while, but it was missing what seemed an obvious feature, the ability to hack the addresses
-on fetched mail so replies would work properly.
-
-The problem was this: suppose someone named 'joe' on locke sent me mail. If I fetched the mail to snark
-and then tried to reply to it, my mailer would cheerfully try to ship it to a nonexistent 'joe' on snark. Hand-
-editing reply addresses to tack on <@ccil.org> quickly got to be a serious pain.
-
-This was clearly something the computer ought to be doing for me. But none of the existing POP clients
-knew how! And this brings us to the first lesson:
-
-1. Every good work of software starts by scratching a developer's personal itch.
-
-Perhaps this should have been obvious (it's long been proverbial that ''Necessity is the mother of invention'')
-but too often software developers spend their days grinding away for pay at programs they neither need
-nor love. But not in the Linux world—which may explain why the average quality of software originated in
-the Linux community is so high.
-
-So, did I immediately launch into a furious whirl of coding up a brand-new POP3 client to compete with
-the existing ones? Not on your life! I looked carefully at the POP utilities I had in hand, asking myself
-''Which one is closest to what I want?'' Because:
-
-
-2. Good programmers know what to write. Great ones know what to rewrite (and reuse).
-
-While I don't claim to be a great programmer, I try to imitate one. An important trait of the great ones is
-constructive laziness. They know that you get an A not for effort but for results, and that it's almost always
-easier to start from a good partial solution than from nothing at all.
-
-Linus Torvalds, for example, didn't actually try to write Linux from scratch. Instead, he started by reusing
-code and ideas from Minix, a tiny Unix-like operating system for PC clones. Eventually all the Minix code
-went away or was completely rewritten—but while it was there, it provided scaffolding for the infant that
-would eventually become Linux.
-
-In the same spirit, I went looking for an existing POP utility that was reasonably well coded, to use as a
-development base.
-
-The source-sharing tradition of the Unix world has always been friendly to code reuse (this is why the GNU
-project chose Unix as a base OS, in spite of serious reservations about the OS itself). The Linux world has
-taken this tradition nearly to its technological limit; it has terabytes of open sources generally available. So
-spending time looking for some else's almost-good-enough is more likely to give you good results in the
-Linux world than anywhere else.
-
-And it did for me. With those I'd found earlier, my second search made up a total of nine candidates—
-fetchpop, PopTart, get-mail, gwpop, pimp, pop-perl, popc, popmail and upop. The one I first settled on was
-'fetchpop' by Seung-Hong Oh. I put my header-rewrite feature in it, and made various other improvements
-which the author accepted into his 1.9 release.
-
-A few weeks later, though, I stumbled across the code for popclient by Carl Harris, and found I had a
-problem. Though fetchpop had some good original ideas in it (such as its background-daemon mode), it
-could only handle POP3 and was rather amateurishly coded (Seung-Hong was at that time a bright but
-inexperienced programmer, and both traits showed). Carl's code was better, quite professional and solid,
-but his program lacked several important and rather tricky-to -implement fetchpop features (including those
-I'd coded myself).
-
-Stay or switch? If I switched, I'd be throwing away the coding I'd already done in exchange for a better
-development base.
-
-A practical motive to switch was the presence of multiple-protocol support. POP3 is the most commonly
-used of the post-office server protocols, but not the only one. Fetchpop and the other competition didn't
-do POP2, RPOP, or APOP, and I was already having vague thoughts of perhaps adding IMAP (Internet
-Message Access Protocol, the most recently designed and most powerful post-office protocol) just for fun.
-
-But I had a more theoretical reason to think switching might be as good an idea as well, something I
-learned long before Linux.
-
-
-3. ''Plan to throw one away; you will, anyhow.'' (Fred Brooks, The Mythical Man-Month, Chapter 11)
-
-Or, to put it another way, you often don't really understand the problem until after the first time you
-implement a solution. The second time, maybe you know enough to do it right. So if you want to get it
-right, be ready to start over at least once [JB].
-
-Well (I told myself) the changes to fetchpop had been my first try. So I switched.
-
-After I sent my first set of popclient patches to Carl Harris on 25 June 1996, I found out that he had basically
-lost interest in popclient some time before. The code was a bit dusty, with minor bugs hanging out. I had
-many changes to make, and we quickly agreed that the logical thing for me to do was take over the
-program.
-
-Without my actually noticing, the project had escalated. No longer was I just contemplating minor patches
-to an existing POP client. I took on maintaining an entire one, and there were ideas bubbling in my head
-that I knew would probably lead to major changes.
-
-In a software culture that encourages code-sharing, this is a natural way for a project to evolve. I was acting
-out this principle:
-
-4. If you have the right attitude, interesting problems will find you.
-
-But Carl Harris's attitude was even more important. He understood that
-
-5. When you lose interest in a program, your last duty to it is to hand it off to a competent successor.
-
-Without ever having to discuss it, Carl and I knew we had a common goal of having the best solution out
-there. The only question for either of us was whether I could establish that I was a safe pair of hands. Once
-I d id that, he acted with grace and dispatch. I hope I will do as well when it comes my turn.
-
-## The Importance of Having Users
-
-And so I inherited popclient. Just as importantly, I inherited popclient's user base. Users are wonderful things
-to have, and not just because they demonstrate that you're serving a need, that you've done something
-right. Properly cultivated, they can become co-developers.
-
-Another strength of the Unix tradition, one that Linux pushes to a happy extreme, is that a lot of users are
-hackers too. Because source code is available, they can be effective hackers. This can be tremendously useful
-for shortening debugging time. Given a bit of encouragement, your users will diagnose problems, suggest
-fixes, and help improve the code far more quickly than you could unaided.
-
-6. Treating your users as co-developers is your least-hassle route to rapid code improvement and effective
-debugging.
-
-The power of this effect is easy to underestimate. In fact, pretty well all of us in the open-source world
-
-
-drastically underestimated how well it would scale up with number of users and against system complexity,
-until Linus Torvalds showed us differently.
+이 효과의 위력은 과소평가되기 쉽다. 사실, 오픈소스의 세계의 우리들조차 시스템의 복잡도에 대항하여 많은 수의 사용자가 얼마나 힘이 되는지를 리누스 토발즈가 보여주기 전까지 과소평가하고 있었다. 
 
 In fact, I think Linus's cleverest and most consequential hack was not the construction of the Linux kernel
 itself, but rather his invention of the Linux development model. When I expressed this opinion in his presence
