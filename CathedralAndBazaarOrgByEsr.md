@@ -60,181 +60,39 @@
 
 이런 효과는 서로 다른 표면적인 증상들을 따라가 버그까지 가는 길이 증상을 보는 것 만으로 예측되지 않을 만큼 복잡할 경우에 더욱 증폭될 것이다. 이러한 경로를 순차적으로 추출하는 한 명의 개발자는 첫번째 시도에서 어려운 경로를 쉬운 경로라 생각하고 고를 가능성이 있다. 하지만 많은 사람이 빠른 배포를 하면서 경로를 병렬적으로 찾는다고 해보자. 그럼 그중 한 명이 가장 쉬운 경로를 찾을 것이고, 더 짧은 시간 안에 버그를 고칠 것이다. 프로젝트 지지자는 그것을 보고 새로운 릴리즈를 할 것이고 같은 버그를 고치던 다른 사람들은 더 어려운 방법을 시도해 보기 전에 멈출 수 있다.
 
-## When Is a Rose Not a Rose?
+## 언제 장미는 장미가 아니게 되는가?
 
-Having studied Linus's behavior and formed a theory about why it was successful, I made a conscious
-decision to test this theory on my new (admittedly much less complex and ambitious) project.
+Linus의 행동을 연구하고 왜 성공했는지에 대한 이론을 세우면서, 나는 이 이론을 나의 새로운 프로젝트에 시험하기로 결정했다. 
+그러나 내가 첫번째로 한일을 popclient를 재구성하고 단순화하는 것 이었다. carl Harris의 구현은 좋았지만, 많은 C 프로그래머들에게 불필요하게 복잡했다. 그는 코드를 중앙으로 다루고 자료구조를 코드를 지원하는 용도로 다루었다. 결과적으로 코드는 아름다웠지만 자료구조 설계는 오히려 못 생겼다. 
+나는 코드 및 자료구조 설계를 개선하는 것 외에도 재작성에 다른 목적이 있었다. 그 목적은 내가 완벽히 이해하는 것으로 진화 시키는 것이다. 
+내가 처음으로 변화시킨 것은 IMAP support를 추가 시키는 것 이였다. 이것과 이전의 변화는 특히 C언어에서 다이나믹 작성을 피해야 한다는 원칙에 따른 것이다.
 
-But the first thing I did was reorganize and simplify popclient a lot. Carl Harris's implementation was very
-sound, but exhibited a kind of unnecessary complexity common to many C programmers. He treated the
-code as central and the data structures as support for the code. As a result, the code was beautiful but the
-data structure design ad-hoc and rather ugly (at least by the high standards of this veteran LISP hacker).
+9. 좋은 자료구조와 안 좋은 코드는 다른 방법보다 좋게 수행된다.
 
-I had another purpose for rewriting besides improving the code and the data structure design, however.
-That was to evolve it into something I understood completely. It's no fun to be responsible for fixing bugs
-in a program you don't understand.
+Brooks, Chapter 9:”순서도를 보여주고 표를 감추면 나는 표를 모르지만, 표를 보여주고 순서도를 감추면 나는 당신의 순서도가 필요 없다. ”
+이 원칙을 따르면서 이름을 정리했다. Popclient가 어떻게 fetched mail을 SMTP port에 전달하는지 배우는 변화를 하기전에 나는 이전에 Linus가 했던 방법에 대한 내 이론대로 프로젝트를 테스트했다. 자주 일찍 발표하고 사람들에게 beta lsit를 전송하고 beta 테스터들의 투표를 반영했다. 결과적으로 많은 버그 리포트와 좋은 해결법을 알게 됐다. 
 
-For the first month or so, then, I was simply following out the implications of Carl's basic design. The first
-serious change I made was to add IMAP support. I did this by reorganizing the protocol machines into a
-generic driver and three method tables (for POP2, POP3, and IMAP). This and the previous changes illustrate
-a general principle that's good for programmers to keep in mind, especially in languages like C that don't
-naturally do dynamic typing:
-
-9. Smart data structures and dumb code works a lot better than the other way around.
-
-Brooks, Chapter 9: ''Show me your flowchart and conceal your tables, and I shall continue to be mystified.
-Show me your tables, and I won't usually need your flowchart; it'll be obvious.'' Allowing for thirty years of
-terminological/cultural shift, it's the same point.
-
-At this point (early September 1996, about six weeks from zero) I started thinking that a name change
-might be in order—after all, it wasn't just a POP client any more. But I hesitated, because there was as yet
-nothing genuinely new in the design. My version of popclient had yet to develop an identity of its own.
-
-That changed, radically, when popclient learned how to forward fetched mail to the SMTP port. I'll get to
-that in a moment. But first: I said earlier that I'd decided to use this project to test my theory about what
-Linus Torvalds had done right. How (you may well ask) did I do that? In these ways:
-
-- I released early and often (almost never less often than every ten days; during periods of intense
-    development, once a day).
-- I grew my beta list by adding to it everyone who contacted me about fetchmail.
-- I sent chatty announcements to the beta list whenever I released, encouraging people to participate.
-- And I listened to my beta-testers, polling them about design decisions and stroking them whenever
+10. beta 테스터를 가장 중요한 자원인 것처럼 대하면, 그들은 가장 중요한 자원을 줄 것이다.
 
 
-'''
-they sent in patches and feedback.
-'''
-The payoff from these simple measures was immediate. From the beginning of the project, I got bug reports
-of a quality most developers would kill for, often with good fixes attached. I got thoughtful criticism, I got
-fan mail, I got intelligent feature suggestions. Which leads to:
+## Popclient가 Fetchmail이 되다.
 
-10. If you treat your beta-testers as if they're your most valuable resource, they will respond by becoming
-your most valuable resource.
+이 프로젝트의 진정한 전환점은 Harry Hochheiser가 클라이언트 컴퓨터의 SMTP 포트로 메일을 전달하는 스크래치 코드를 보냈을 때였다. 나는 이 기능의 구현이 다른 모든 메일 전송모드가 필요 없다는 것을 알았다. SMTP 포워딩 개념은 Linus의 방법을 모방하여 얻은 가장 큰 결과이다.
 
-One interesting measure of fetchmail's success is the sheer size of the project beta list, fetchmail-friends. At
-the time of latest revision of this paper (November 2000) it has 287 members and is adding two or three a
-week.
+11. 좋은 아이디어를 얻는데 있어서 가장 좋은 방법은 사용자로부터 좋은 아이디어를 인식하는 것이다. 
 
-Actually, when I revised in late May 1997 I found the list was beginning to lose members from its high of
-close to 300 for an interesting reason. Several people have asked me to unsubscribe them because fetchmail
-is working so well for them that they no longer need to see the list traffic! Perhaps this is part of the normal
-life-cycle of a mature bazaar-style project.
+프로젝트를 시작한지 불과 몇 주 후에, 사용자로부터 많은 이메일을 받게 되었다. 그러나 모든 공통적인 설계에 두가지 더 근본적이고 비 정치적인 교훈이 있다.
 
-## Popclient becomes Fetchmail
+12. 좋은 해결법은 문제에 대한 개념이 잘못되었다는 것을 깨닫는 데 있다.
 
-The real turning point in the project was when Harry Hochheiser sent me his scratch code for forwarding
-mail to the client machine's SMTP port. I realized almost immediately that a reliable implementation of this
-feature would make all the other mail delivery modes next to obsolete.
+나는 MTA/MDA로서 popclient를 계속 개발함으로써 잘못된 문제를 해결하려고 노력했다. 개발 중 벽에 부딪혔을 때 문제는 재구성 되어야한다. 문제를 재구성하여 1. SMTP 포워딩 지원을 일반 드라이버로 해킹 2.기본 모드를 만들고 3. 모든 출력 옵션을 구성 하는 것으로 해결했다. 그 결과 모든 문제가 사라졌다. 나중에 동적 SLIP과 관련된 모호한 상황을 사용자 지정 로컬 MDA를 통해 전달하는 것보다 간단한 방법을 찾았다. 기능을 잃지 않는다면 노후한 방법을 버리는데 주저하지 마라. Antoine는 다음과 같이 말했다.
 
-For many weeks I had been tweaking fetchmail rather incrementally while feeling like the interface design
-was serviceable but grubby—inelegant and with too many exiguous options hanging out all over. The
-options to dump fetched mail to a mailbox file or standard output particularly bothered me, but I couldn't
-figure out why.
+13. “설계에서 완벽함은 추가 할 것이 없을 때가 아니라, 더 이상 버릴 것이 없을 때 이루어진다.”
 
-(If you don't care about the technicalia of Internet mail, the next two paragraphs can be safely skipped.)
-
-What I saw when I thought about SMTP forwarding was that popclient had been trying to do too many
-things. It had been designed to be both a mail transport agent (MTA) and a local delivery agent (MDA).
-With SMTP forwarding, it could get out of the MDA business and be a pure MTA, handing off mail to other
-programs for local delivery just as sendmail does.
-
-Why mess with all the complexity of configuring a mail delivery agent or setting up lock-and-append on a
-mailbox when port 25 is almost guaranteed to be there on any platform with TCP/IP support in the first
-place? Especially when this means retrieved mail is guaranteed to look like normal sender-initiated SMTP
-mail, which is really what we want anyway.
-
-(Back to a higher level....)
-
-Even if you didn't follow the preceding technical jargon, there are several important lessons here. First, this
+ 코드가 더 쉽고 간단해 질 때가 좋은 것이다. 이 과정에서 프로젝트는 popclient와 다른 정체성을 획득했고 이름을 fetchmail이라 바꾸었다. SMTP에서 fetchmail로 개발되는 과정에서 일반적인 교훈이 있다. 병렬화 가능한 디버깅, 개발, 설계 공간 탐색이다. 덕분에 누락버그의 수정이 가능하다. 높은 설계 수준이라도 많은 공동 개발자가 설계 공간을 탐색하는 것은 매우 중요하다. 확장에 의한 탐색 덕분에 나와 Harry도 큰 승리를 거두었다.
 
 
-SMTP-forwarding concept was the biggest single payoff I got from consciously trying to emulate Linus's
-methods. A user gave me this terrific idea—all I had to do was understand the implications.
-
-11. The next best thing to having good ideas is recognizing good ideas from your users. Sometimes the
-latter is better.
-
-Interestingly enough, you will quickly find that if you are completely and self-deprecatingly truthful about
-how much you owe other people, the world at large will treat you as though you did every bit of the
-invention yourself and are just being becomingly modest about your innate genius. We can all see how
-well this worked for Linus!
-
-(When I gave my talk at the first Perl Conference in August 1997, hacker extraordinaire Larry Wall was in
-the front row. As I got to the last line above he called out, religious-revival style, ''Tell it, tell it, brother!''.
-The whole audience laughed, because they knew this had worked for the inventor of Perl, too.)
-
-After a very few weeks of running the project in the same spirit, I began to get similar praise not just from
-my users but from other people to whom the word leaked out. I stashed away some of that email; I'll look
-at it again sometime if I ever start wondering whether my life has been worthwhile :-).
-
-But there are two more fundamental, non-political lessons here that are general to all kinds of design.
-
-12. Often, the most striking and innovative solutions come from realizing that your concept of the problem
-was wrong.
-
-I had been trying to solve the wrong problem by continuing to develop popclient as a combined MTA/MDA
-with all kinds of funky local delivery modes. Fetchmail's design needed to be rethought from the ground
-up as a pure MTA, a part of the normal SMTP-speaking Internet mail path.
-
-When you hit a wall in development—when you find yourself hard put to think past the next patch—it's
-often time to ask not whether you've got the right answer, but whether you're asking the right question.
-Perhaps the problem needs to be reframed.
-
-Well, I had reframed my problem. Clearly, the right thing to do was (1) hack SMTP forwarding support into
-the generic driver, (2) make it the default mode, and (3) eventually throw out all the other delivery modes,
-especially the deliver-to -file and deliver-to -standard-output options.
-
-I hesitated over step 3 for some time, fearing to upset long-time popclient users dependent on the alternate
-delivery mechanisms. In theory, they could immediately switch to .forward files or their non-sendmail
-equivalents to get the same effects. In practice the transition might have been messy.
-
-But when I did it, the benefits proved huge. The cruftiest parts of the driver code vanished. Configuration
-got radically simpler—no more grovelling around for the system MDA and user's mailbox, no more worries
-about whether the underlying OS supports file locking.
-
-
-Also, the only way to lose mail vanished. If you specified delivery to a file and the disk got full, your mail
-got lost. This can't happen with SMTP forwarding because your SMTP listener won't return OK unless the
-message can be delivered or at least spooled for later delivery.
-
-Also, performance improved (though not so you'd notice it in a single run). Another not insignificant benefit
-of this change was that the manual page got a lot simpler.
-
-Later, I had to bring delivery via a user-specified local MDA back in order to allow handling of some obscure
-situations involving dynamic SLIP. But I found a much simpler way to do it.
-
-The moral? Don't hesitate to throw away superannuated features when you can do it without loss of
-effectiveness. Antoine de Saint-Exup�ry (who was an aviator and aircraft designer when he wasn't authoring
-classic children's books) said:
-
-13. ''Perfection (in design) is achieved not when there is nothing more to add, but rather when there is
-nothing more to take away.''
-
-When your code is getting both better and simpler, that is when you know it's right. And in the process,
-the fetchmail design acquired an identity of its own, different from the ancestral popclient.
-
-It was time for the name change. The new design looked much more like a dual of sendmail than the old
-popclient had; both are MTAs, but where sendmail pushes then delivers, the new popclient pulls then
-delivers. So, two months off the blocks, I renamed it fetchmail.
-
-There is a more general lesson in this story about how SMTP delivery came to fetchmail. It is not only
-debugging that is parallelizable; development and (to a perhaps surprising extent) exploration of design
-space is, too. When your development mode is rapidly iterative, development and enhancement may
-become special cases of debugging—fixing 'bugs of omission' in the original capabilities or concept of the
-software.
-
-Even at a higher level of design, it can be very valuable to have lots of co-developers random-walking
-through the design space near your product. Consider the way a puddle of water finds a drain, or better
-yet how ants find food: exploration essentially by diffusion, followed by exploitation mediated by a scalable
-communication mechanism. This works very well; as with Harry Hochheiser and me, one of your outriders
-may well find a huge win nearby that you were just a little too close-focused to see.
-
-## Fetchmail Grows Up
-
-There I was with a neat and innovative design, code that I knew worked well because I used it every day,
-and a burgeoning beta list. It gradually dawned on me that I was no longer engaged in a trivial personal
-hack that might happen to be useful to few other people. I had my hands on a program that every hacker
-with a Unix box and a SLIP/PPP mail connection really needs.
+## Fetchmail의 성장
 
 당신은 나중에 결과가 필연적이고, 자연스럽고, 오히려 미리 정해진 것처럼 보일만큼 강력한 설계 아이디어로 그것에 빠져들어야 한다. 이와 같은 아이디어를 위해 노력할 수 있는 방법은 오직 수많은 아이디어를 가지고 있거나, 다른 사람들의 좋은 아이디어들을 창작자가 가야한다고 생각하는 방향으로 이끌 만큼의 공학적 정의를 가지고 있는 것 밖에 없다.
 나는 칼 해리스와 해리 호크헤이서로부터 몇가지 아이디어를 얻었고 그것들을 열심히 발전시켰다. 우리 중 아무도 사람들이 천재적이라고 생각하는 낭만적인 방식으로 '독창적' 이지 못했다. 내가 이를 깨닫고 난 후에 쓰는 가장 첫번째이고 압도적으로 중요한 기능은 멀티드롭 서포트이다(multidrop support). 멀티드롭 서포트 기능을 추가하게 된 주된 이유는 이 기능이 나로 하여금 모든 경우에 대하여 주소 지정을 다루도록 하여, 싱글 드롭으로부터 버그를 해결할 수 있다고 생각하게 했기 때문이다.
