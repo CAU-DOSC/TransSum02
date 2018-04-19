@@ -1,5 +1,5 @@
 ﻿
-오픈소스프로젝트(CathedralAndBazaarOrgByEsr.pdf 번역)
+오픈소스프로젝트 (CathedralAndBazaarOrgByEsr.pdf 번역 및 요약)
 =============
 
 CathedralAndBazaarOrgByEsr.md에 요약했습니다.
